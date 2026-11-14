@@ -30,6 +30,8 @@ export default function MetricCard({ summary, icon, onClick }: MetricCardProps) 
     const y = height - ((val - min) / range) * (height - 8) - 4;
     return `${x},${y}`;
   }).join(' ');
+  const fillPoints = `0,${height} ${points} ${width},${height}`;
+  const gradientId = `spark-grad-${summary.name.replace(/[^a-zA-Z0-9]/g, '-')}`;
 
   const strokeColor = 
     summary.status === 'alert' ? '#8B3A42' :
@@ -39,7 +41,15 @@ export default function MetricCard({ summary, icon, onClick }: MetricCardProps) 
   return (
     <div 
       onClick={onClick}
-      className="relative group bg-[#FFFCF8] hover:bg-[#FAF5EE] border border-[#E4DAD0] hover:border-[#D5BDA4] rounded-2xl p-5 transition-all duration-300 shadow-warm hover:shadow-warm-md flex flex-col justify-between cursor-pointer"
+      className="relative group bg-[#FFFCF8] hover:bg-[#FAF5EE] border border-[#E4DAD0] hover:border-[#D5BDA4] rounded-2xl p-5 transition-all duration-300 shadow-warm hover:shadow-warm-md hover:-translate-y-1 flex flex-col justify-between cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#542B38]"
+      tabIndex={0}
+      role="button"
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          onClick?.();
+        }
+      }}
     >
       {/* Top row */}
       <div className="flex items-start justify-between">
@@ -97,9 +107,19 @@ export default function MetricCard({ summary, icon, onClick }: MetricCardProps) 
           </span>
         </div>
 
-        {/* Mini Sparkline SVG */}
+        {/* Mini Sparkline SVG with Gradient Area */}
         <div className="w-[110px] h-[36px] overflow-hidden">
           <svg viewBox={`0 0 ${width} ${height}`} className="w-full h-full overflow-visible">
+            <defs>
+              <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor={strokeColor} stopOpacity="0.35" />
+                <stop offset="100%" stopColor={strokeColor} stopOpacity="0.02" />
+              </linearGradient>
+            </defs>
+            <polygon
+              fill={`url(#${gradientId})`}
+              points={fillPoints}
+            />
             <polyline
               fill="none"
               stroke={strokeColor}

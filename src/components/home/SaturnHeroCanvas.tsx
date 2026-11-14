@@ -515,28 +515,6 @@ function DeepSpaceEnvironment() {
         />
       </points>
 
-      {/* Deep Burgundy & Amber Space Nebula Atmosphere behind Saturn */}
-      <mesh position={[2.5, 0.0, -10]}>
-        <planeGeometry args={[18, 14]} />
-        <meshBasicMaterial
-          color="#3A1724"
-          transparent
-          opacity={0.38}
-          blending={THREE.AdditiveBlending}
-          depthWrite={false}
-        />
-      </mesh>
-      <mesh position={[1.5, -1.0, -9]}>
-        <planeGeometry args={[14, 10]} />
-        <meshBasicMaterial
-          color="#4E2A1E"
-          transparent
-          opacity={0.22}
-          blending={THREE.AdditiveBlending}
-          depthWrite={false}
-        />
-      </mesh>
-
       {/* ------------------------------------------------------------------ */}
       {/* Realistic Cinematic Directional Lighting                           */}
       {/* ------------------------------------------------------------------ */}

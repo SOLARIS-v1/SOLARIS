@@ -1,8 +1,5 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Stars } from '@react-three/drei';
-import * as THREE from 'three';
 import {
   Activity,
   Shield,
@@ -19,71 +16,9 @@ import Navbar from '../components/layout/Navbar';
 import { resetDemoData } from '../utils/localStorage';
 import { NASA_FIVE_HAZARDS } from '../data/hazardData';
 import { sound } from '../utils/audio';
-
-// 3D Orbital Earth & Spacecraft Scene in Hero
-function Hero3DScene() {
-  const earthRef = useRef<THREE.Mesh>(null);
-  const ringRef = useRef<THREE.Mesh>(null);
-  const probeRef = useRef<THREE.Group>(null);
-
-  useFrame((state) => {
-    const t = state.clock.getElapsedTime();
-    if (earthRef.current) {
-      earthRef.current.rotation.y = t * 0.08;
-    }
-    if (ringRef.current) {
-      ringRef.current.rotation.z = t * 0.04;
-      ringRef.current.rotation.x = Math.PI / 3 + Math.sin(t * 0.2) * 0.1;
-    }
-    if (probeRef.current) {
-      probeRef.current.position.x = Math.cos(t * 0.5) * 2.8;
-      probeRef.current.position.z = Math.sin(t * 0.5) * 2.8;
-      probeRef.current.position.y = Math.sin(t) * 0.4;
-      probeRef.current.rotation.y = -t * 0.5;
-    }
-  });
-
-  return (
-    <>
-      <Stars radius={50} depth={50} count={2500} factor={3} saturation={0} fade speed={0.8} />
-      <ambientLight intensity={0.9} />
-      <directionalLight position={[10, 10, 5]} intensity={1.2} color="#FFFDF9" />
-      <pointLight position={[-10, -5, -5]} intensity={0.6} color="#D5BDA4" />
-
-      {/* Earth Sphere - Deep Burgundy Ocean & Warm Continental Tones */}
-      <mesh ref={earthRef} position={[1.8, -0.6, -1]}>
-        <sphereGeometry args={[2.0, 48, 48]} />
-        <meshStandardMaterial
-          color="#3A1C26"
-          emissive="#200D14"
-          roughness={0.65}
-          metalness={0.15}
-        />
-      </mesh>
-
-      {/* Subtle Warm Atmosphere Halo */}
-      <mesh position={[1.8, -0.6, -1]}>
-        <sphereGeometry args={[2.05, 32, 32]} />
-        <meshBasicMaterial color="#D5BDA4" transparent opacity={0.12} side={THREE.BackSide} />
-      </mesh>
-
-      {/* Orbital Telemetry Rings in Champagne */}
-      <mesh ref={ringRef} position={[1.8, -0.6, -1]}>
-        <ringGeometry args={[2.6, 2.64, 64]} />
-        <meshBasicMaterial color="#D5BDA4" side={THREE.DoubleSide} transparent opacity={0.5} />
-      </mesh>
-
-      {/* Orbiting Medical Telemetry Station */}
-      <group ref={probeRef}>
-        <mesh>
-          <octahedronGeometry args={[0.22, 0]} />
-          <meshStandardMaterial color="#D5BDA4" emissive="#A56F73" emissiveIntensity={0.5} wireframe />
-        </mesh>
-        <pointLight intensity={1.5} distance={3} color="#D5BDA4" />
-      </group>
-    </>
-  );
-}
+import homepageBg from '../assets/homepage-bg.jpg';
+import SaturnHeroCanvas from '../components/home/SaturnHeroCanvas';
+import { ThreeErrorBoundary } from '../components/body-explorer/ThreeErrorBoundary';
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -95,20 +30,45 @@ export default function LandingPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F5F0E9] text-[#33302E] selection:bg-[#D5BDA4] selection:text-[#542B38]">
+    <div className="min-h-screen relative bg-[#F5F0E9] text-[#33302E] selection:bg-[#D5BDA4] selection:text-[#542B38] overflow-x-hidden">
+      {/* Space-Themed Background Image Layer (Homepage Only) */}
+      <div
+        className="fixed inset-0 z-0 pointer-events-none"
+        style={{
+          backgroundImage: `url(${homepageBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        {/* Subtle Warm Ivory & Burgundy Translucent Overlay for Contrast & Text Readability */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#F5F0E9]/55 via-[#F5F0E9]/65 to-[#F5F0E9]/75 backdrop-blur-[0.5px]" />
+      </div>
+
       <Navbar />
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-[92vh] flex items-center pt-28 pb-16 px-6 overflow-hidden">
-        {/* 3D Canvas Background */}
-        <div className="absolute inset-0 z-0 opacity-80 pointer-events-none">
-          <Canvas camera={{ position: [0, 0, 6], fov: 45 }}>
-            <Hero3DScene />
-          </Canvas>
+      <section className="relative z-10 min-h-[92vh] flex items-center pt-28 pb-16 px-6 overflow-hidden">
+        {/* Soft Burgundy & Dark Brown Celestial Atmosphere behind Saturn */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[550px] lg:w-[800px] h-[550px] lg:h-[800px] rounded-full bg-gradient-to-br from-[#542B38]/20 via-[#3A1C26]/12 to-transparent blur-3xl pointer-events-none -z-10" />
+
+        {/* 3D Saturn Canvas with WebGL Error Boundary & Fallback */}
+        <div className="absolute inset-0 z-0">
+          <ThreeErrorBoundary
+            fallback={
+              <div className="w-full h-full flex items-center justify-end pr-16 opacity-30 pointer-events-none">
+                <div className="w-72 h-72 rounded-full border border-[#D5BDA4]/50 flex items-center justify-center">
+                  <div className="w-56 h-56 rounded-full border border-[#542B38]/40" />
+                </div>
+              </div>
+            }
+          >
+            <SaturnHeroCanvas />
+          </ThreeErrorBoundary>
         </div>
 
-        {/* Soft Warm Radial Vignette */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#F5F0E9] via-[#F5F0E9]/85 to-transparent pointer-events-none z-10" />
+        {/* Soft Warm Radial Vignette to preserve high contrast for text on the left */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#F5F0E9] via-[#F5F0E9]/70 to-transparent pointer-events-none z-10" />
 
         <div className="relative z-20 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           <div className="lg:col-span-7 space-y-6">
@@ -175,7 +135,7 @@ export default function LandingPage() {
       </section>
 
       {/* ================= SECTION A: ABOUT ASTRA HEALTH ================= */}
-      <section id="about" className="py-20 px-6 max-w-7xl mx-auto border-t border-[#E4DAD0]">
+      <section id="about" className="relative z-10 py-20 px-6 max-w-7xl mx-auto border-t border-[#E4DAD0]">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-mono uppercase tracking-widest text-[#542B38] bg-[#FAF5EE] border border-[#D5BDA4] px-3 py-1 rounded-full font-bold">
             Project Overview
@@ -222,7 +182,7 @@ export default function LandingPage() {
       </section>
 
       {/* ================= SECTION B: WHY MONITORING MATTERS ================= */}
-      <section className="py-20 px-6 bg-[#FAF5EE] border-y border-[#E4DAD0]">
+      <section className="relative z-10 py-20 px-6 bg-[#FAF5EE]/75 backdrop-blur-sm border-y border-[#E4DAD0]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <span className="text-xs font-mono uppercase tracking-widest text-[#542B38] bg-[#FFFCF8] border border-[#D5BDA4] px-3 py-1 rounded-full font-bold">
@@ -280,7 +240,7 @@ export default function LandingPage() {
       </section>
 
       {/* ================= SECTION C: FIVE HAZARDS OF HUMAN SPACEFLIGHT ================= */}
-      <section id="hazards" className="py-20 px-6 max-w-7xl mx-auto">
+      <section id="hazards" className="relative z-10 py-20 px-6 max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-mono uppercase tracking-widest text-[#542B38] bg-[#FAF5EE] border border-[#D5BDA4] px-3 py-1 rounded-full font-bold">
             NASA Challenge Core
@@ -351,7 +311,7 @@ export default function LandingPage() {
       </section>
 
       {/* ================= SECTION D: KEY FEATURES ================= */}
-      <section id="features" className="py-20 px-6 bg-[#FAF5EE] border-y border-[#E4DAD0]">
+      <section id="features" className="relative z-10 py-20 px-6 bg-[#FAF5EE]/75 backdrop-blur-sm border-y border-[#E4DAD0]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-xs font-mono uppercase tracking-widest text-[#542B38] bg-[#FFFCF8] border border-[#D5BDA4] px-3 py-1 rounded-full font-bold">
@@ -430,7 +390,8 @@ export default function LandingPage() {
       </section>
 
       {/* ================= SECTION E: HOW IT WORKS ================= */}
-      <section className="py-20 px-6 max-w-7xl mx-auto">
+      <section className="relative z-10 py-20 px-6 max-w-7xl mx-auto">
+
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-mono uppercase tracking-widest text-[#542B38] bg-[#FAF5EE] border border-[#D5BDA4] px-3 py-1 rounded-full font-bold">
             Operation Protocol
@@ -479,7 +440,7 @@ export default function LandingPage() {
       </section>
 
       {/* ================= SECTION F: FOOTER ================= */}
-      <footer className="py-12 px-6 border-t border-[#6E3B4B] bg-[#542B38] text-xs text-[#D5BDA4] font-mono shadow-warm">
+      <footer className="relative z-10 py-12 px-6 border-t border-[#6E3B4B] bg-[#542B38] text-xs text-[#D5BDA4] font-mono shadow-warm">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="space-y-3">
             <div className="flex items-center gap-2">

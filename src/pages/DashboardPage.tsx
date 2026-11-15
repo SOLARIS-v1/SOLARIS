@@ -84,7 +84,7 @@ export default function DashboardPage() {
           <div>
             <div className="flex flex-wrap items-center gap-2 mb-2">
               <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#D5BDA4]/20 border border-[#D5BDA4]/40 text-[#D5BDA4] font-bold uppercase tracking-wider">
-                NASA MISSION CONTROL TELEMETRY
+                NASA SPACEFLIGHT TELEMETRY
               </span>
               <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#F5F0E9]/10 border border-[#F5F0E9]/30 text-[#F5F0E9] font-bold uppercase tracking-wider">
                 DEMO ENVIRONMENT

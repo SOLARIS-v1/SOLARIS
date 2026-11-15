@@ -92,7 +92,7 @@ export default function SignupPage() {
         {success && (
           <div className="mb-4 p-3 rounded-lg bg-[#EBF3EE] border border-[#C6DCCF] text-[#4E7D63] text-xs font-mono flex items-center gap-2">
             <CheckCircle2 className="w-4 h-4 flex-shrink-0" />
-            <span>Account initialized! Preparing mission control...</span>
+            <span>Account initialized! Preparing health console...</span>
           </div>
         )}
 

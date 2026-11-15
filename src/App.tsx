@@ -29,7 +29,7 @@ export default function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
 
-        {/* Mission Control Dashboard Layout */}
+        {/* Health Dashboard Layout */}
         <Route
           element={
             <DashboardLayout

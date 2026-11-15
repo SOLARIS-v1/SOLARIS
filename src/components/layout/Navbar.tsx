@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Activity, Orbit, Sparkles, LogIn, Compass, Menu, X, ChevronRight, Github } from 'lucide-react';
+import { Activity, Orbit, Sparkles, LogIn, Menu, X, ChevronRight, Github } from 'lucide-react';
 import { sound } from '../../utils/audio';
 
 export default function Navbar() {
@@ -139,20 +139,6 @@ export default function Navbar() {
             <span className="flex items-center gap-2">
               <Sparkles className="w-3.5 h-3.5 text-[#D5BDA4]" />
               3D Human Explorer
-            </span>
-            <ChevronRight className="w-3.5 h-3.5" />
-          </Link>
-          <Link
-            to="/dashboard"
-            onClick={() => {
-              sound.playClick();
-              setMobileMenuOpen(false);
-            }}
-            className="flex items-center justify-between p-2.5 rounded-lg bg-[#3E1F29] text-[#F5F0E9] font-bold transition"
-          >
-            <span className="flex items-center gap-2">
-              <Compass className="w-3.5 h-3.5 text-[#D5BDA4]" />
-              Launch Mission Control
             </span>
             <ChevronRight className="w-3.5 h-3.5" />
           </Link>

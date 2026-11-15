@@ -61,7 +61,7 @@ export const NASA_FIVE_HAZARDS: SpaceHazard[] = [
     primaryRisk: 'Cardiovascular events and critical limitations in receiving terrestrial medical support.',
     description: 'A mission to Mars spans hundreds of millions of kilometers, introducing one-way radio latency of up to 22 minutes. There is no rapid evacuation capsule back to Earth and no resupply of medicines or whole blood. The crew must diagnose, triage, and treat cardiovascular and traumatic events autonomously.',
     detailedEffects: [
-      'Inability to receive real-time surgical or telemetry consultation from Mission Control during acute emergencies.',
+      'Inability to receive real-time surgical or telemetry consultation from Earth ground control during acute emergencies.',
       'Pharmaceutical shelf-life degradation under cumulative cosmic radiation flux over multi-year journeys.',
       'Heightened psychological pressure on the designated crew medical officer.',
       'Need for self-contained, closed-loop diagnostic ultrasound and autonomous point-of-care lab analyzers.'

@@ -15,7 +15,7 @@ export default function DashboardLayout({ onEnvironmentChange }: DashboardLayout
       {/* Sidebar navigation */}
       <Sidebar />
 
-      {/* Main Mission Control Content area */}
+      {/* Main Health Content area */}
       <div className="flex-1 flex flex-col min-w-0 min-h-screen overflow-x-hidden relative">
         {/* Subtle warm background ambient accents */}
         <div className="fixed top-0 right-1/4 w-96 h-96 bg-[#D5BDA4]/15 rounded-full blur-3xl pointer-events-none -z-10" />

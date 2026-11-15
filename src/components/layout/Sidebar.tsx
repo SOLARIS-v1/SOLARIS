@@ -75,7 +75,7 @@ export default function Sidebar() {
                   SOLARIS
                 </span>
                 <span className="block text-[9px] font-mono text-[#FFF3E3] font-semibold uppercase tracking-wider">
-                  Mission Control
+                  Health System
                 </span>
               </div>
             )}

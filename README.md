@@ -10,7 +10,7 @@ The app combines a mission dashboard, clinical telemetry visualization, 3D anato
 
 ## Overview
 
-Designed for missions with limited communication and delayed ground support, SOLARIS helps crew members and mission control quickly interpret physiological telemetry and prioritize interventions.
+Designed for missions with limited communication and delayed ground support, SOLARIS helps crew members and flight surgeons quickly interpret physiological telemetry and prioritize interventions.
 
 Key capabilities include:
 

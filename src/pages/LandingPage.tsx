@@ -159,7 +159,7 @@ export default function LandingPage() {
             About SOLARIS
           </h2>
           <p className="text-[#262320] text-sm sm:text-base leading-relaxed font-sans">
-            During deep space travel to the Moon or Mars, astronauts cannot quickly return to Earth or dial Mission Control for instantaneous surgery advice. Radio signals take up to 22 minutes one way. SOLARIS bridges this distance with an intelligent, self-contained health platform that monitors vital signs, identifies risks early, and guides astronauts through proactive preventive routines.
+            During deep space travel to the Moon or Mars, astronauts cannot quickly return to Earth or dial ground medical teams for instantaneous surgery advice. Radio signals take up to 22 minutes one way. SOLARIS bridges this distance with an intelligent, self-contained health platform that monitors vital signs, identifies risks early, and guides astronauts through proactive preventive routines.
           </p>
         </div>
 
@@ -398,7 +398,7 @@ export default function LandingPage() {
               Core Capabilities &amp; Features
             </h2>
             <p className="text-[#262320] text-sm">
-              Engineered with medical clarity, offline autonomy, and mission control precision.
+              Engineered with medical clarity, offline autonomy, and clinical-grade precision.
             </p>
           </div>
 
@@ -626,7 +626,6 @@ export default function LandingPage() {
           <div>
             <div className="text-[#F5F0E9] font-bold mb-3 uppercase tracking-wider">Navigation</div>
             <ul className="space-y-2">
-              <li><Link to="/dashboard" className="text-[#D5BDA4] hover:text-[#F5F0E9] transition">Mission Control</Link></li>
               <li><Link to="/body-explorer" className="text-[#D5BDA4] hover:text-[#F5F0E9] transition">3D Body Explorer</Link></li>
               <li><Link to="/health-monitoring" className="text-[#D5BDA4] hover:text-[#F5F0E9] transition">Health Monitoring</Link></li>
               <li><Link to="/hazards" className="text-[#D5BDA4] hover:text-[#F5F0E9] transition">5 Space Hazards</Link></li>

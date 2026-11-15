@@ -1,4 +1,4 @@
-# Astra Health
+﻿# SOLARIS — Spaceflight Onboard Local Autonomous Readiness & Intelligence System
 
 Astronaut biometric monitoring, space health analytics, and mission control interface built with React, Three.js, Vite, and Tailwind CSS.
 
@@ -31,7 +31,7 @@ Astronaut biometric monitoring, space health analytics, and mission control inte
 
 ```bash
 # Clone the repository
-git clone https://github.com/ASTRA-V1/demo-repository.git
+git clone https://github.com/SOLARIS-V1/demo-repository.git
 cd demo-repository
 
 # Install dependencies
@@ -46,3 +46,4 @@ npm run dev
 ```bash
 npm run build
 ```
+

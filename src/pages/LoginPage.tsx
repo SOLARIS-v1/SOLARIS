@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Eye, EyeOff, Lock, Mail, Orbit, Sparkles, ArrowRight, ShieldCheck, AlertCircle } from 'lucide-react';
 import { setAuthUser, resetDemoData } from '../utils/localStorage';
@@ -62,7 +62,7 @@ export default function LoginPage() {
               <Orbit className="w-5 h-5 text-[#F5F0E9]" />
             </div>
             <span className="font-orbitron font-extrabold text-xl text-[#542B38] tracking-wider">
-              ASTRA<span className="text-[#A56F73]">HEALTH</span>
+              SOLARIS
             </span>
           </Link>
           <h2 className="text-xl font-bold text-[#33302E] tracking-wide">Astronaut Mission Access</h2>
@@ -182,9 +182,10 @@ export default function LoginPage() {
 
         {/* Security Disclaimer */}
         <div className="mt-6 pt-4 border-t border-[#E4DAD0] text-[10px] text-center text-[#817A76] font-mono">
-          Prototype Simulation • Uses localStorage • Not a production authentication server
+          Prototype Simulation â€¢ Uses localStorage â€¢ Not a production authentication server
         </div>
       </div>
     </div>
   );
 }
+

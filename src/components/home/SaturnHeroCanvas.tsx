@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, useState, useEffect } from 'react';
+﻿import React, { useRef, useMemo, useState, useEffect } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { Stars } from '@react-three/drei';
 import * as THREE from 'three';
@@ -292,8 +292,8 @@ function SaturnSystem() {
   const { diffuseMap, bumpMap } = useMemo(() => createSaturnSurfaceTextures(), []);
   const ringTexture = useMemo(() => createSaturnRingsTexture(innerRatio), [innerRatio]);
 
-  // Base astronomical axial tilt of Saturn: ~26.7°
-  const baseTiltX = 0.44; // ~25.2°
+  // Base astronomical axial tilt of Saturn: ~26.7Â°
+  const baseTiltX = 0.44; // ~25.2Â°
   const baseTiltZ = -0.16;
   const baseTiltY = 0.12;
 
@@ -338,7 +338,7 @@ function SaturnSystem() {
       systemRef.current.position.y = basePosition[1] + Math.sin(t * 0.7) * 0.07;
     }
 
-    // 4. Orbiting ASTRA Medical Telemetry Probe & Sensor Ring
+    // 4. Orbiting SOLARIS Medical Telemetry Probe & Sensor Ring
     if (probeRef.current) {
       const orbitSpeed = 0.35;
       const orbitR = 3.95;
@@ -425,7 +425,7 @@ function SaturnSystem() {
       </mesh>
 
       {/* ------------------------------------------------------------------ */}
-      {/* 4. Elegant ASTRA Telemetry Orbit Path & Sensor Satellite           */}
+      {/* 4. Elegant SOLARIS Telemetry Orbit Path & Sensor Satellite           */}
       {/* ------------------------------------------------------------------ */}
       {/* Inclined telemetry orbit trajectory line */}
       <mesh ref={telemetryRingRef} rotation={[0.45, 0.25, 0]}>
@@ -576,3 +576,4 @@ export default function SaturnHeroCanvas() {
     </Canvas>
   );
 }
+

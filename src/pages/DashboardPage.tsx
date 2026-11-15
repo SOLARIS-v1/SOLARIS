@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   Heart,
@@ -55,10 +55,10 @@ export default function DashboardPage() {
     refreshData();
     const handleStorage = () => refreshData();
     window.addEventListener('storage', handleStorage);
-    window.addEventListener('astra_health_update', handleStorage);
+    window.addEventListener('solaris_health_update', handleStorage);
     return () => {
       window.removeEventListener('storage', handleStorage);
-      window.removeEventListener('astra_health_update', handleStorage);
+      window.removeEventListener('solaris_health_update', handleStorage);
     };
   }, []);
 
@@ -95,7 +95,7 @@ export default function DashboardPage() {
               {profile.missionName}
             </h1>
             <p className="text-xs font-mono text-[#D5BDA4] mt-1">
-              Active mission profile for <span className="text-[#FFFCF8] font-bold">{profile.name}</span> ({profile.callsign}) • Continuous Autonomous Health Monitoring
+              Active mission profile for <span className="text-[#FFFCF8] font-bold">{profile.name}</span> ({profile.callsign}) â€¢ Continuous Autonomous Health Monitoring
             </p>
           </div>
 
@@ -150,7 +150,7 @@ export default function DashboardPage() {
               overallStatus === 'alert' ? 'bg-[#F9EBEF] text-[#8B3A42]' :
               overallStatus === 'caution' ? 'bg-[#FAF3E8] text-[#B87D3B]' : 'bg-[#EBF3EE] text-[#4E7D63]'
             }`}>
-              {overallStatus === 'nominal' ? 'Nominal • Go' : overallStatus === 'caution' ? 'Caution • Drift' : 'Alert • Attention'}
+              {overallStatus === 'nominal' ? 'Nominal â€¢ Go' : overallStatus === 'caution' ? 'Caution â€¢ Drift' : 'Alert â€¢ Attention'}
             </span>
           </div>
         </div>
@@ -165,7 +165,7 @@ export default function DashboardPage() {
               Physiological Telemetry Overview
             </h2>
             <p className="text-xs font-mono text-[#817A76]">
-              Live astronaut sample readings • All values labeled as DEMO DATA
+              Live astronaut sample readings â€¢ All values labeled as DEMO DATA
             </p>
           </div>
           <Link
@@ -289,7 +289,7 @@ export default function DashboardPage() {
 
             {/* Medical Disclaimer Banner */}
             <div className="mt-4 p-2.5 rounded-lg bg-[#F5F0E9] border border-[#E4DAD0] text-[10px] text-[#817A76] font-mono">
-              ⚠️ {MEDICAL_DISCLAIMER}
+              âš ï¸ {MEDICAL_DISCLAIMER}
             </div>
           </div>
 
@@ -339,3 +339,4 @@ export default function DashboardPage() {
     </div>
   );
 }
+

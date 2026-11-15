@@ -1,9 +1,9 @@
-import { AstronautProfile, HealthRecord, EnvironmentTelemetry, AchievementBadge, MetricSummary } from '../types';
+﻿import { AstronautProfile, HealthRecord, EnvironmentTelemetry, AchievementBadge, MetricSummary } from '../types';
 
 export const DEFAULT_ASTRONAUT_PROFILE: AstronautProfile = {
   id: 'astro-alex-001',
   name: 'Alex Vance',
-  callsign: 'Astra-1',
+  callsign: 'SOLARIS-1',
   role: 'Mission Commander & Flight Engineer',
   missionName: 'Artemis VII Lunar-Mars Forward Transit',
   missionDay: 124,
@@ -336,3 +336,4 @@ export const PHYSIOLOGICAL_RADAR_DATA = [
   { subject: 'Metabolic Balance', current: 95, benchmark: 90, fullMark: 100 },
   { subject: 'Psychological State', current: 87, benchmark: 85, fullMark: 100 },
 ];
+

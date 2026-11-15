@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import {
   HeartPulse,
   PlusCircle,
@@ -40,10 +40,10 @@ export default function HealthMonitoringPage() {
   useEffect(() => {
     refreshRecords();
     const handleUpdate = () => refreshRecords();
-    window.addEventListener('astra_health_update', handleUpdate);
+    window.addEventListener('solaris_health_update', handleUpdate);
     window.addEventListener('storage', handleUpdate);
     return () => {
-      window.removeEventListener('astra_health_update', handleUpdate);
+      window.removeEventListener('solaris_health_update', handleUpdate);
       window.removeEventListener('storage', handleUpdate);
     };
   }, []);
@@ -115,7 +115,7 @@ export default function HealthMonitoringPage() {
           { icon: <Heart className="w-4 h-4 text-[#8B3A42]" />, label: 'Heart Rate (BPM)', desc: 'Normal flight resting pulse: 60-85 BPM. Monitored for tachycardia caused by microgravity fluid loss and cardiovascular deconditioning.' },
           { icon: <Activity className="w-4 h-4 text-[#542B38]" />, label: 'Blood Pressure (mmHg)', desc: 'Target < 120/80 mmHg. Cephalic fluid shifts increase upper venous and intracranial pressure, placing tension on optic nerves.' },
           { icon: <Droplets className="w-4 h-4 text-[#B87D3B]" />, label: 'Blood Sugar (mg/dL)', desc: 'Fasting glycemia target: 70-110 mg/dL. Microgravity affects insulin sensitivity and carbohydrate metabolism during spaceflight.' },
-          { icon: <Thermometer className="w-4 h-4 text-[#A56F73]" />, label: 'Core Temperature (°C)', desc: 'Baseline: 36.4 - 37.2 °C. Absence of natural convection in weightlessness causes heat accumulation ("space pyrexia").' },
+          { icon: <Thermometer className="w-4 h-4 text-[#A56F73]" />, label: 'Core Temperature (Â°C)', desc: 'Baseline: 36.4 - 37.2 Â°C. Absence of natural convection in weightlessness causes heat accumulation ("space pyrexia").' },
           { icon: <Moon className="w-4 h-4 text-[#542B38]" />, label: 'Sleep Duration (Hours)', desc: 'Flight minimum: 7.0 hours. Sleep deprivation impairs critical EVA reaction time and dampens immune function against cosmic rays.' },
           { icon: <Smile className="w-4 h-4 text-[#4E7D63]" />, label: 'Mood Status', desc: 'Daily self-rating. Tracks behavioral resilience and operational fatigue caused by sensory confinement and distance from Earth.' },
         ].map((item, i) => (
@@ -237,7 +237,7 @@ export default function HealthMonitoringPage() {
                       <span className="font-bold text-[#33302E]">{record.bloodSugar}</span> mg/dL
                     </td>
                     <td className="px-4 py-3.5 text-[#33302E]">
-                      <span className="font-bold text-[#33302E]">{record.bodyTemperature.toFixed(1)}</span> °C
+                      <span className="font-bold text-[#33302E]">{record.bodyTemperature.toFixed(1)}</span> Â°C
                     </td>
                     <td className="px-4 py-3.5 text-[#33302E]">
                       <span className="font-bold text-[#33302E]">{record.sleepDuration.toFixed(1)}</span> hrs
@@ -285,7 +285,7 @@ export default function HealthMonitoringPage() {
                 onClick={() => setSelectedRecordForDetail(null)}
                 className="text-[#817A76] hover:text-[#33302E] transition font-bold text-lg leading-none"
               >
-                ✕
+                âœ•
               </button>
             </div>
 
@@ -306,7 +306,7 @@ export default function HealthMonitoringPage() {
                   { label: 'HR', value: `${selectedRecordForDetail.heartRate} BPM` },
                   { label: 'BP', value: `${selectedRecordForDetail.bloodPressureSystolic}/${selectedRecordForDetail.bloodPressureDiastolic}` },
                   { label: 'Glucose', value: `${selectedRecordForDetail.bloodSugar} mg/dL` },
-                  { label: 'Temp', value: `${selectedRecordForDetail.bodyTemperature.toFixed(1)} °C` },
+                  { label: 'Temp', value: `${selectedRecordForDetail.bodyTemperature.toFixed(1)} Â°C` },
                   { label: 'Sleep', value: `${selectedRecordForDetail.sleepDuration.toFixed(1)} hrs` },
                   { label: 'Mood', value: selectedRecordForDetail.mood },
                 ].map((item, i) => (
@@ -339,3 +339,4 @@ export default function HealthMonitoringPage() {
     </div>
   );
 }
+

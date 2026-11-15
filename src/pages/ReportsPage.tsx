@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import {
   FileText,
   Printer,
@@ -38,10 +38,10 @@ export default function ReportsPage() {
       setRecords(getHealthRecords());
       setTasks(getRoutineTasks());
     };
-    window.addEventListener('astra_health_update', handleUpdate);
+    window.addEventListener('solaris_health_update', handleUpdate);
     window.addEventListener('storage', handleUpdate);
     return () => {
-      window.removeEventListener('astra_health_update', handleUpdate);
+      window.removeEventListener('solaris_health_update', handleUpdate);
       window.removeEventListener('storage', handleUpdate);
     };
   }, []);
@@ -117,10 +117,10 @@ export default function ReportsPage() {
         <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-6 border-b border-[#E4DAD0] print:border-black">
           <div>
             <div className="text-[10px] uppercase tracking-widest text-[#542B38] font-bold">
-              NASA HUMAN RESEARCH PROGRAM • FLIGHT TELEMETRY DOSSIER
+              NASA HUMAN RESEARCH PROGRAM â€¢ FLIGHT TELEMETRY DOSSIER
             </div>
             <h2 className="text-2xl font-extrabold text-[#33302E] print:text-black font-orbitron mt-1">
-              ASTRA HEALTH REPORT
+              SOLARIS MISSION REPORT
             </h2>
             <div className="text-xs text-[#817A76] print:text-gray-600 mt-1">
               Document Ref: #AHR-ARTEMIS-{profile.missionDay}-V2
@@ -139,9 +139,9 @@ export default function ReportsPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-xl bg-[#F5F0E9] print:bg-gray-100 border border-[#E4DAD0] print:border-gray-300">
           {[
             { label: 'Crew Member', value: profile.name, valueClass: 'text-[#33302E] font-bold text-sm' },
-            { label: 'Callsign / Role', value: `${profile.callsign} • Commander`, valueClass: 'text-[#542B38] font-bold' },
+            { label: 'Callsign / Role', value: `${profile.callsign} â€¢ Commander`, valueClass: 'text-[#542B38] font-bold' },
             { label: 'Mission Assignment', value: `Artemis VII Day ${profile.missionDay}`, valueClass: 'text-[#33302E] font-bold' },
-            { label: 'Blood Group / Age', value: `${profile.bloodType} • ${profile.age} yrs`, valueClass: 'text-[#33302E] font-bold' },
+            { label: 'Blood Group / Age', value: `${profile.bloodType} â€¢ ${profile.age} yrs`, valueClass: 'text-[#33302E] font-bold' },
           ].map((item, i) => (
             <div key={i}>
               <span className="text-[10px] text-[#817A76] uppercase block">{item.label}</span>
@@ -160,7 +160,7 @@ export default function ReportsPage() {
               { label: 'Heart Rate', value: `${summaries.heartRate.current} BPM`, status: summaries.heartRate.statusText, statusClass: 'text-[#4E7D63]' },
               { label: 'Blood Pressure', value: `${summaries.bloodPressure.current} mmHg`, status: summaries.bloodPressure.statusText, statusClass: 'text-[#542B38]' },
               { label: 'Blood Sugar', value: `${summaries.bloodSugar.current} mg/dL`, status: summaries.bloodSugar.statusText, statusClass: 'text-[#B87D3B]' },
-              { label: 'Core Body Temp', value: `${summaries.bodyTemperature.current} °C`, status: summaries.bodyTemperature.statusText, statusClass: 'text-[#4E7D63]' },
+              { label: 'Core Body Temp', value: `${summaries.bodyTemperature.current} Â°C`, status: summaries.bodyTemperature.statusText, statusClass: 'text-[#4E7D63]' },
               { label: 'Sleep Duration', value: `${summaries.sleepDuration.current} Hours`, status: summaries.sleepDuration.statusText, statusClass: 'text-[#A56F73]' },
               { label: 'Subjective Mood', value: summaries.moodStatus.current, status: summaries.moodStatus.statusText, statusClass: 'text-[#542B38]' },
             ].map((item, i) => (
@@ -225,10 +225,12 @@ export default function ReportsPage() {
             </p>
           </div>
           <div className="text-center pt-2 text-[#817A76]">
-            ASTRA HEALTH • Artemis Mission Simulation Suite • 2026 NASA Space Apps Challenge
+            SOLARIS â€¢ Artemis Mission Simulation Suite â€¢ 2026 NASA Space Apps Challenge
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+

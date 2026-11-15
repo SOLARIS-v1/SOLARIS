@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Activity, Orbit, Sparkles, LogIn, Compass, Menu, X, ChevronRight } from 'lucide-react';
 import { resetDemoData } from '../../utils/localStorage';
@@ -45,7 +45,7 @@ export default function Navbar() {
           <div>
             <div className="flex items-center gap-2">
               <span className="font-orbitron font-extrabold tracking-wider text-lg text-[#F5F0E9]">
-                ASTRA<span className="text-[#D5BDA4]">HEALTH</span>
+                SOLARIS
               </span>
               <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[#3E1F29] border border-[#6E3B4B] text-[#D5BDA4] font-semibold">
                 NASA 2026
@@ -178,3 +178,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

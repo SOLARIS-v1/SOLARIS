@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import {
   ResponsiveContainer,
   LineChart,
@@ -49,10 +49,10 @@ export default function AnalyticsPage() {
 
   useEffect(() => {
     const handleUpdate = () => setRecords(getHealthRecords());
-    window.addEventListener('astra_health_update', handleUpdate);
+    window.addEventListener('solaris_health_update', handleUpdate);
     window.addEventListener('storage', handleUpdate);
     return () => {
-      window.removeEventListener('astra_health_update', handleUpdate);
+      window.removeEventListener('solaris_health_update', handleUpdate);
       window.removeEventListener('storage', handleUpdate);
     };
   }, []);
@@ -405,7 +405,7 @@ export default function AnalyticsPage() {
               <h3 className="font-bold text-[#33302E] text-sm font-orbitron">Core Body Temperature</h3>
             </div>
             <span className="text-[10px] font-mono text-[#542B38] bg-[#FAF5EE] px-2.5 py-0.5 rounded border border-[#E4DAD0] font-semibold">
-              Circadian Range: 36.4 - 37.2 °C
+              Circadian Range: 36.4 - 37.2 Â°C
             </span>
           </div>
 
@@ -419,7 +419,7 @@ export default function AnalyticsPage() {
                 <Line
                   type="monotone"
                   dataKey={timeRange === 'today' ? 'temp' : 'temperature'}
-                  name="Core Temp (°C)"
+                  name="Core Temp (Â°C)"
                   stroke="#A56F73"
                   strokeWidth={2.5}
                   dot={{ r: 3, fill: '#A56F73' }}
@@ -545,3 +545,4 @@ export default function AnalyticsPage() {
     </div>
   );
 }
+

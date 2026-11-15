@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import {
   Bell,
   Clock,
@@ -55,12 +55,12 @@ export default function MissionHeader({ onEnvironmentChange }: MissionHeaderProp
       setCurrentEnv(getSelectedEnvironment());
       setSoundOn(getSoundEnabled());
     };
-    window.addEventListener('astra_health_update', handleUpdate);
+    window.addEventListener('solaris_health_update', handleUpdate);
     window.addEventListener('storage', handleUpdate);
 
     return () => {
       clearInterval(timer);
-      window.removeEventListener('astra_health_update', handleUpdate);
+      window.removeEventListener('solaris_health_update', handleUpdate);
       window.removeEventListener('storage', handleUpdate);
     };
   }, []);
@@ -114,7 +114,7 @@ export default function MissionHeader({ onEnvironmentChange }: MissionHeaderProp
             </div>
             <div className="flex items-center gap-3 text-xs font-mono text-[#817A76] mt-0.5">
               <span>Commander Alex (Demo)</span>
-              <span>•</span>
+              <span>â€¢</span>
               <span className="text-[#542B38] font-semibold">MET Day {profile.missionDay}</span>
             </div>
           </div>
@@ -178,8 +178,8 @@ export default function MissionHeader({ onEnvironmentChange }: MissionHeaderProp
           {/* Quick Environment Telemetry Pill */}
           <div className="hidden md:flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-[#FAF5EE] border border-[#E4DAD0] text-[11px] font-mono text-[#817A76]">
             <span>Grav: <strong className="text-[#542B38]">{envTelemetry.gravityG}g</strong></span>
-            <span>•</span>
-            <span>Rad: <strong className="text-[#B87D3B]">{envTelemetry.radiationRateDailyMicroSv} µSv/d</strong></span>
+            <span>â€¢</span>
+            <span>Rad: <strong className="text-[#B87D3B]">{envTelemetry.radiationRateDailyMicroSv} ÂµSv/d</strong></span>
           </div>
 
           {/* Audio toggle button */}
@@ -263,3 +263,4 @@ export default function MissionHeader({ onEnvironmentChange }: MissionHeaderProp
     </header>
   );
 }
+

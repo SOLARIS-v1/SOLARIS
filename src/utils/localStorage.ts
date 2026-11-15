@@ -1,23 +1,23 @@
-import { AstronautProfile, HealthRecord, DailyRoutineTask, SpaceEnvironment, AchievementBadge } from '../types';
+﻿import { AstronautProfile, HealthRecord, DailyRoutineTask, SpaceEnvironment, AchievementBadge } from '../types';
 import { DEFAULT_ASTRONAUT_PROFILE, INITIAL_HEALTH_RECORDS, INITIAL_ACHIEVEMENT_BADGES } from '../data/demoHealthData';
 import { INITIAL_DAILY_ROUTINE_TASKS } from '../data/routineData';
 
 const KEYS = {
-  AUTH_USER: 'astra_health_auth_user',
-  ASTRONAUT_PROFILE: 'astra_health_profile',
-  HEALTH_RECORDS: 'astra_health_records',
-  ROUTINE_TASKS: 'astra_health_routine_tasks',
-  ENVIRONMENT: 'astra_health_environment',
-  BADGES: 'astra_health_badges',
-  APP_THEME: 'astra_health_theme',
-  SOUND_ENABLED: 'astra_health_sound',
-  UNITS: 'astra_health_units',
+  AUTH_USER: 'solaris_auth_user',
+  ASTRONAUT_PROFILE: 'solaris_profile',
+  HEALTH_RECORDS: 'solaris_records',
+  ROUTINE_TASKS: 'solaris_routine_tasks',
+  ENVIRONMENT: 'solaris_environment',
+  BADGES: 'solaris_badges',
+  APP_THEME: 'solaris_theme',
+  SOUND_ENABLED: 'solaris_sound',
+  UNITS: 'solaris_units',
 };
 
 // Custom event dispatcher to keep all pages instantly synchronized
 export function notifyStateChange() {
   if (typeof window !== 'undefined') {
-    window.dispatchEvent(new CustomEvent('astra_health_update'));
+    window.dispatchEvent(new CustomEvent('solaris_health_update'));
   }
 }
 
@@ -196,3 +196,4 @@ export function resetDemoData(): void {
   });
   notifyStateChange();
 }
+

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
   Activity,
@@ -78,7 +78,7 @@ export default function LandingPage() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#542B38] opacity-75" />
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#542B38]" />
               </span>
-              <span className="font-semibold tracking-wide">NASA Space Apps Challenge 2026 • Human Space Exploration</span>
+              <span className="font-semibold tracking-wide">NASA Space Apps Challenge 2026 â€¢ Human Space Exploration</span>
             </div>
 
             {/* Main Headline */}
@@ -94,7 +94,7 @@ export default function LandingPage() {
 
             {/* Description */}
             <p className="text-base sm:text-lg text-[#524E4B] max-w-xl leading-relaxed font-sans">
-              ASTRA HEALTH is an autonomous, mission-grade physiological monitoring platform designed for astronauts on long-duration lunar, Martian, and deep-space missions. Real-time telemetry, 3D anatomical tracking, and intelligent early warning countermeasure protocols.
+              SOLARIS — Spaceflight Onboard Local Autonomous Readiness & Intelligence System — is an autonomous, mission-grade physiological monitoring platform designed for astronauts on long-duration lunar, Martian, and deep-space missions. Real-time telemetry, 3D anatomical tracking, and intelligent early warning countermeasure protocols.
             </p>
 
             {/* CTA Buttons */}
@@ -149,17 +149,17 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ================= SECTION A: ABOUT ASTRA HEALTH ================= */}
+      {/* ================= SECTION A: About SOLARIS ================= */}
       <section id="about" className="relative z-10 py-20 px-6 max-w-7xl mx-auto border-t border-[#E4DAD0]">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-xs font-mono uppercase tracking-widest text-[#542B38] bg-[#FAF5EE] border border-[#D5BDA4] px-3.5 py-1 rounded-full font-bold shadow-warm-sm">
             Project Overview
           </span>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#33302E] font-orbitron mt-3 mb-4">
-            About ASTRA HEALTH
+            About SOLARIS
           </h2>
           <p className="text-[#524E4B] text-sm sm:text-base leading-relaxed font-sans">
-            During deep space travel to the Moon or Mars, astronauts cannot quickly return to Earth or dial Mission Control for instantaneous surgery advice. Radio signals take up to 22 minutes one way. ASTRA HEALTH bridges this distance with an intelligent, self-contained health platform that monitors vital signs, identifies risks early, and guides astronauts through proactive preventive routines.
+            During deep space travel to the Moon or Mars, astronauts cannot quickly return to Earth or dial Mission Control for instantaneous surgery advice. Radio signals take up to 22 minutes one way. SOLARIS bridges this distance with an intelligent, self-contained health platform that monitors vital signs, identifies risks early, and guides astronauts through proactive preventive routines.
           </p>
         </div>
 
@@ -241,7 +241,7 @@ export default function LandingPage() {
             </h2>
             <div className="space-y-4 text-sm text-[#524E4B]">
               <p className="leading-relaxed">
-                Human physiology evolved over millions of years inside Earth’s protective 1-G gravity field and atmospheric radiation shield. When those protections are stripped away, the human body begins adapting rapidly:
+                Human physiology evolved over millions of years inside Earthâ€™s protective 1-G gravity field and atmospheric radiation shield. When those protections are stripped away, the human body begins adapting rapidly:
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3 bg-[#FFFCF8] p-4 rounded-xl border border-[#E4DAD0] shadow-warm-sm hover:border-[#D5BDA4] transition-colors">
@@ -269,7 +269,7 @@ export default function LandingPage() {
               <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] space-y-1.5">
                 <div className="flex justify-between items-center">
                   <span className="text-[#817A76]">Monthly Bone Density Loss</span>
-                  <span className="text-[#B87D3B] font-bold">1.0% – 1.5%</span>
+                  <span className="text-[#B87D3B] font-bold">1.0% â€“ 1.5%</span>
                 </div>
                 <div className="w-full bg-[#E4DAD0] h-1.5 rounded-full overflow-hidden">
                   <div className="bg-[#B87D3B] h-full rounded-full" style={{ width: '45%' }} />
@@ -325,7 +325,7 @@ export default function LandingPage() {
             The Five Hazards of Human Spaceflight
           </h2>
           <p className="text-[#524E4B] text-sm sm:text-base leading-relaxed">
-            NASA's Human Research Program classifies space exploration risks into five distinct hazards. ASTRA HEALTH monitors indicators for every hazard category.
+            NASA's Human Research Program classifies space exploration risks into five distinct hazards. SOLARIS monitors indicators for every hazard category.
           </p>
         </div>
 
@@ -616,7 +616,7 @@ export default function LandingPage() {
           <div className="space-y-3">
             <div className="flex items-center gap-2">
               <Orbit className="w-5 h-5 text-[#D5BDA4]" />
-              <span className="text-[#F5F0E9] font-orbitron font-bold text-base">ASTRA HEALTH</span>
+              <span className="text-[#F5F0E9] font-orbitron font-bold text-base">SOLARIS</span>
             </div>
             <p className="text-[#D5BDA4]/80 text-xs">
               NASA Space Apps Challenge 2026. Human Space Exploration / Healthcare Technology.
@@ -659,11 +659,12 @@ export default function LandingPage() {
 
         <div className="max-w-7xl mx-auto pt-6 border-t border-[#6E3B4B] text-center text-[#D5BDA4]/70 text-[11px] leading-relaxed">
           <p className="mb-1">
-            <strong className="text-[#D5BDA4]">DISCLAIMER:</strong> ASTRA HEALTH is an educational concept prototype created for the 2026 NASA Space Apps Challenge. All data shown is simulated demonstration data. This application does NOT provide real medical diagnoses or clinical prescriptions.
+            <strong className="text-[#D5BDA4]">DISCLAIMER:</strong> SOLARIS is an educational concept prototype created for the 2026 NASA Space Apps Challenge. All data shown is simulated demonstration data. This application does NOT provide real medical diagnoses or clinical prescriptions.
           </p>
-          <p>© 2026 ASTRA HEALTH Team. Built with React, Three.js, Vite &amp; Tailwind CSS.</p>
+          <p>Â© 2026 SOLARIS Team. Built with React, Three.js, Vite &amp; Tailwind CSS.</p>
         </div>
       </footer>
     </div>
   );
 }
+

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import {
   Zap,
   ShieldCheck,
@@ -22,10 +22,10 @@ export default function InsightsPage() {
 
   useEffect(() => {
     const handleUpdate = () => setRecords(getHealthRecords());
-    window.addEventListener('astra_health_update', handleUpdate);
+    window.addEventListener('solaris_health_update', handleUpdate);
     window.addEventListener('storage', handleUpdate);
     return () => {
-      window.removeEventListener('astra_health_update', handleUpdate);
+      window.removeEventListener('solaris_health_update', handleUpdate);
       window.removeEventListener('storage', handleUpdate);
     };
   }, []);
@@ -147,7 +147,7 @@ export default function InsightsPage() {
                       <span>Indicator: <strong className="text-[#542B38]">{insight.metric}</strong></span>
                       {insight.hazardCorrelation && (
                         <>
-                          <span>•</span>
+                          <span>â€¢</span>
                           <span className="text-[#A56F73] font-semibold">{insight.hazardCorrelation}</span>
                         </>
                       )}
@@ -194,7 +194,7 @@ export default function InsightsPage() {
                   <div className="space-y-2 bg-[#F5F0E9] p-3.5 rounded-lg border border-[#E4DAD0]">
                     {insight.actionProtocol.map((action, idx) => (
                       <div key={idx} className="flex items-start gap-2.5 text-xs text-[#33302E]">
-                        <span className="text-[#542B38] font-bold mt-0.5">•</span>
+                        <span className="text-[#542B38] font-bold mt-0.5">â€¢</span>
                         <span>{action}</span>
                       </div>
                     ))}
@@ -208,3 +208,4 @@ export default function InsightsPage() {
     </div>
   );
 }
+

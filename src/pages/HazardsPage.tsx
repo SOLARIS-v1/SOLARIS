@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ShieldAlert,
@@ -32,7 +32,7 @@ export default function HazardsPage() {
       name: 'Low Earth Orbit (ISS)',
       distance: '400 km',
       latency: '< 0.5 seconds',
-      radLevel: 'Moderate (~300 µSv/day, partial magnetosphere shielding)',
+      radLevel: 'Moderate (~300 ÂµSv/day, partial magnetosphere shielding)',
       gravity: '0.0001g microgravity',
       desc: 'Rapid emergency evacuation to Earth possible within 24 hours.'
     },
@@ -40,7 +40,7 @@ export default function HazardsPage() {
       name: 'Lunar Gateway & Surface Base',
       distance: '384,400 km',
       latency: '1.3 seconds',
-      radLevel: 'High (~700 µSv/day, zero magnetic shielding)',
+      radLevel: 'High (~700 ÂµSv/day, zero magnetic shielding)',
       gravity: '0.166g (1/6 Earth gravity)',
       desc: 'Evacuation requires 3-5 days. High regolith dust toxicity hazard.'
     },
@@ -48,7 +48,7 @@ export default function HazardsPage() {
       name: 'Deep Space Mars Transit Cruise',
       distance: '55,000,000 to 400,000,000 km',
       latency: '3 to 22 minutes (one-way)',
-      radLevel: 'Extreme (~1,200 µSv/day, GCR & SPE exposure)',
+      radLevel: 'Extreme (~1,200 ÂµSv/day, GCR & SPE exposure)',
       gravity: '0.0g microgravity cruise',
       desc: 'Zero emergency return capability. Autonomous medical triage mandatory.'
     },
@@ -56,7 +56,7 @@ export default function HazardsPage() {
       name: 'Mars Surface Outpost',
       distance: 'Up to 400,000,000 km',
       latency: 'Up to 22 minutes',
-      radLevel: 'Substantial (~540 µSv/day, thin atmospheric shielding)',
+      radLevel: 'Substantial (~540 ÂµSv/day, thin atmospheric shielding)',
       gravity: '0.38g (3/8 Earth gravity)',
       desc: 'Long stay mission (500+ days). Closed ecosystem ECLSS dependency.'
     }
@@ -172,7 +172,7 @@ export default function HazardsPage() {
           <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="text-xs font-mono px-2.5 py-1 rounded bg-[#F9EBEF] border border-[#E8C4CB] text-[#8B3A42] font-bold uppercase">
-                HAZARD 0{selectedHazard.hazardNumber} • {selectedHazard.severityLevel} SEVERITY
+                HAZARD 0{selectedHazard.hazardNumber} â€¢ {selectedHazard.severityLevel} SEVERITY
               </span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#33302E] font-orbitron">
@@ -212,7 +212,7 @@ export default function HazardsPage() {
               <ul className="space-y-2">
                 {selectedHazard.detailedEffects.map((eff, i) => (
                   <li key={i} className="flex items-start gap-2.5 text-xs text-[#33302E] bg-[#FAF3E8] p-2.5 rounded-lg border border-[#EBD7BE]">
-                    <span className="text-[#B87D3B] font-bold mt-0.5">•</span>
+                    <span className="text-[#B87D3B] font-bold mt-0.5">â€¢</span>
                     <span>{eff}</span>
                   </li>
                 ))}
@@ -266,7 +266,7 @@ export default function HazardsPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono">
             {selectedHazard.countermeasures.map((cm, i) => (
               <div key={i} className="flex items-start gap-2.5 p-3 rounded-xl bg-[#EBF3EE] border border-[#C6DCCF] text-[#33302E]">
-                <span className="text-[#4E7D63] font-bold mt-0.5">✓</span>
+                <span className="text-[#4E7D63] font-bold mt-0.5">âœ“</span>
                 <span className="leading-relaxed">{cm}</span>
               </div>
             ))}
@@ -287,7 +287,7 @@ export default function HazardsPage() {
           </h3>
         </div>
         <p className="text-xs font-mono text-[#817A76] mb-6">
-          How each spaceflight hazard directly links to organ systems and telemetry sensors in ASTRA HEALTH.
+          How each spaceflight hazard directly links to organ systems and telemetry sensors in SOLARIS.
         </p>
 
         <div className="space-y-3 font-mono text-xs">
@@ -302,9 +302,9 @@ export default function HazardsPage() {
               <div className="flex items-center gap-2 text-[#542B38] font-bold">
                 <span>{row.hazard}</span>
               </div>
-              <span className="text-[#817A76]">→</span>
+              <span className="text-[#817A76]">â†’</span>
               <div className="text-[#A56F73] font-medium">{row.system}</div>
-              <span className="text-[#817A76]">→</span>
+              <span className="text-[#817A76]">â†’</span>
               <div className="text-[#4E7D63]">{row.monitor}</div>
             </div>
           ))}
@@ -313,3 +313,4 @@ export default function HazardsPage() {
     </div>
   );
 }
+

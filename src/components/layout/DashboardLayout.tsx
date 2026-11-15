@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import MissionHeader from './MissionHeader';
@@ -31,13 +31,14 @@ export default function DashboardLayout({ onEnvironmentChange }: DashboardLayout
         {/* Footer with NASA Space Apps Challenge 2026 branding */}
         <footer className="mt-auto px-6 py-4 border-t border-[#E4DAD0] text-center text-xs font-mono text-[#817A76] flex flex-col sm:flex-row items-center justify-between gap-2 bg-[#FFFCF8]">
           <div className="font-semibold text-[#542B38]">
-            ASTRA HEALTH • NASA Space Apps Challenge 2026 Prototype
+            SOLARIS â€¢ NASA Space Apps Challenge 2026 Prototype
           </div>
           <div className="text-[11px] text-[#817A76]">
-            Simulated Prototype Telemetry • Not For Real Medical Diagnoses
+            Simulated Prototype Telemetry â€¢ Not For Real Medical Diagnoses
           </div>
         </footer>
       </div>
     </div>
   );
 }
+

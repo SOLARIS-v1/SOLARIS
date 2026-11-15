@@ -1,4 +1,4 @@
-import { HealthRecord, AstronautProfile } from '../types';
+﻿import { HealthRecord, AstronautProfile } from '../types';
 
 export function exportHealthRecordsToCSV(records: HealthRecord[], profile: AstronautProfile): void {
   const headers = [
@@ -34,7 +34,7 @@ export function exportHealthRecordsToCSV(records: HealthRecord[], profile: Astro
   ]);
 
   const csvContent = [
-    `# NASA Space Apps Challenge 2026 - ASTRA HEALTH Mission Telemetry Export`,
+    `# NASA Space Apps Challenge 2026 - SOLARIS Mission Telemetry Export`,
     `# Astronaut: ${profile.name} (${profile.callsign}) | Mission: ${profile.missionName} | Day: ${profile.missionDay}`,
     `# Environment: ${profile.environment} | Export Timestamp: ${new Date().toISOString()}`,
     `# DISCLAIMER: All data is simulated prototype data or manually entered demo readings. NOT FOR REAL MEDICAL DIAGNOSIS.`,
@@ -46,7 +46,7 @@ export function exportHealthRecordsToCSV(records: HealthRecord[], profile: Astro
   const url = URL.createObjectURL(blob);
   const link = document.createElement('a');
   link.setAttribute('href', url);
-  link.setAttribute('download', `ASTRA_HEALTH_Telemetry_${profile.name.replace(/\s+/g, '_')}_Day${profile.missionDay}.csv`);
+  link.setAttribute('download', `SOLARIS_Telemetry_${profile.name.replace(/\s+/g, '_')}_Day${profile.missionDay}.csv`);
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -56,3 +56,4 @@ export function exportHealthRecordsToCSV(records: HealthRecord[], profile: Astro
 export function printMissionReport(): void {
   window.print();
 }
+

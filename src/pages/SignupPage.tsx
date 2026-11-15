@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { User, Mail, Lock, Orbit, ArrowRight, AlertCircle, CheckCircle2 } from 'lucide-react';
 import { setAuthUser, setAstronautProfile, getAstronautProfile } from '../utils/localStorage';
@@ -43,7 +43,7 @@ export default function SignupPage() {
     const updatedProfile = {
       ...currentProfile,
       name: fullName,
-      callsign: callsign || 'Astra-New',
+      callsign: callsign || 'SOLARIS-New',
       email: email,
     };
     setAstronautProfile(updatedProfile);
@@ -73,7 +73,7 @@ export default function SignupPage() {
               <Orbit className="w-5 h-5 text-[#F5F0E9]" />
             </div>
             <span className="font-orbitron font-extrabold text-xl text-[#542B38] tracking-wider">
-              ASTRA<span className="text-[#A56F73]">HEALTH</span>
+              SOLARIS
             </span>
           </Link>
           <h2 className="text-xl font-bold text-[#33302E] tracking-wide">Crew Member Onboarding</h2>
@@ -188,3 +188,4 @@ export default function SignupPage() {
     </div>
   );
 }
+

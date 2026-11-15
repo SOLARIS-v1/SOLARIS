@@ -1,4 +1,4 @@
-import { SpaceHazard, OrganSystemInfo } from '../types';
+﻿import { SpaceHazard, OrganSystemInfo } from '../types';
 
 export const NASA_FIVE_HAZARDS: SpaceHazard[] = [
   {
@@ -7,7 +7,7 @@ export const NASA_FIVE_HAZARDS: SpaceHazard[] = [
     title: 'Space Radiation',
     tagline: 'Deep Space Ionizing Fields & Solar Particle Events',
     primaryRisk: 'Immune system suppression, cellular DNA strand breaks, increased cancer risk, and ocular cataracts.',
-    description: 'Beyond Earth’s protective magnetosphere, astronauts are constantly bombarded by Galactic Cosmic Rays (GCRs) and unpredictable Solar Particle Events (SPEs). These high-energy protons and atomic nuclei easily penetrate spacecraft hulls, causing sub-atomic damage to human tissues.',
+    description: 'Beyond Earthâ€™s protective magnetosphere, astronauts are constantly bombarded by Galactic Cosmic Rays (GCRs) and unpredictable Solar Particle Events (SPEs). These high-energy protons and atomic nuclei easily penetrate spacecraft hulls, causing sub-atomic damage to human tissues.',
     detailedEffects: [
       'Chronic sub-lethal radiation damage to bone marrow stem cells, reducing white blood cell production.',
       'Cellular oxidative stress and DNA double-strand breaks impairing tissue self-repair.',
@@ -69,7 +69,7 @@ export const NASA_FIVE_HAZARDS: SpaceHazard[] = [
     affectedBodySystems: ['Cardiovascular System', 'Autonomous Clinical Care', 'Emergency Resuscitation'],
     monitoredIndicators: ['Continuous ECG Rhythm', 'Blood Pressure (Systolic/Diastolic)', 'Troponin and Cardiac Enzymes', 'Blood Sugar & Metabolic Panel'],
     countermeasures: [
-      'Automated smart clinical diagnostic decision-support software (like ASTRA HEALTH).',
+      'Automated smart clinical diagnostic decision-support software (like SOLARIS).',
       'Crew cross-training in ultrasound-guided invasive access and emergency anesthesia.',
       'Lyophilized freeze-dried shelf-stable pharmaceutical synthesis packs.',
       'Redundant closed-loop oxygen and fluid resuscitation systems.'
@@ -119,7 +119,7 @@ export const NASA_FIVE_HAZARDS: SpaceHazard[] = [
       'Opportunistic virulence shifts in closed-loop habitat bacterial and fungal microbiomes.'
     ],
     affectedBodySystems: ['Respiratory System', 'Gastrointestinal & Nutrition', 'Dermatological Barrier', 'Cellular Metabolism'],
-    monitoredIndicators: ['Cabin CO2 & O2 Partial Pressures', 'Body Core Temperature (°C)', 'Fasting Blood Glucose (mg/dL)', 'Spirometry Peak Expiratory Flow'],
+    monitoredIndicators: ['Cabin CO2 & O2 Partial Pressures', 'Body Core Temperature (Â°C)', 'Fasting Blood Glucose (mg/dL)', 'Spirometry Peak Expiratory Flow'],
     countermeasures: [
       'High-efficiency particulate air (HEPA) and trace contaminant catalytic scrubbers.',
       'Hydroponic Space Crop Production for fresh leafy microgreens rich in fresh antioxidants.',
@@ -184,7 +184,7 @@ export const ANATOMICAL_BODY_SYSTEMS: OrganSystemInfo[] = [
     subsystem: 'Gas Exchange & Environmental Shielding',
     position3D: [-0.02, 0.95, 0.2],
     primaryFunction: 'Transfers oxygen into blood and removes carbon dioxide while filtering inhaled micro-particulates.',
-    relatedIndicators: ['Cabin O2 % (Nominal 21%)', 'Cabin CO2 % (Target < 0.3%)', 'Respiration Rate (breaths/min)', 'Core Body Temperature (°C)'],
+    relatedIndicators: ['Cabin O2 % (Nominal 21%)', 'Cabin CO2 % (Target < 0.3%)', 'Respiration Rate (breaths/min)', 'Core Body Temperature (Â°C)'],
     spaceflightRisks: [
       'In microgravity, air does not circulate by natural thermal convection; stagnant CO2 pockets can form around sleeping astronauts.',
       'Extraterrestrial regolith dust (sharp jagged silica particles from Moon/Mars) inhaled through airlocks causes severe alveolar irritation.',
@@ -228,7 +228,7 @@ export const ANATOMICAL_BODY_SYSTEMS: OrganSystemInfo[] = [
     subsystem: 'Locomotor & Anti-Gravity Posture',
     position3D: [-0.22, 0.2, 0.08],
     primaryFunction: 'Generates physical force, enables EVA locomotion, pumps venous blood back to heart, and maintains posture.',
-    relatedIndicators: ['Peak Isometric Knee Extension Torque', 'Daily Exercise Kilocalorie Burn', 'Core Body Temperature (°C)', 'Electrolyte Hydration Balance'],
+    relatedIndicators: ['Peak Isometric Knee Extension Torque', 'Daily Exercise Kilocalorie Burn', 'Core Body Temperature (Â°C)', 'Electrolyte Hydration Balance'],
     spaceflightRisks: [
       'Disuse atrophy: slow-twitch (Type I) oxidative endurance fibers quickly transform into fatigable fast-twitch (Type IIx) fibers.',
       'Loss of up to 20% calf muscle volume and 30% muscle power during a standard 6-month mission if workouts are missed.',
@@ -267,3 +267,4 @@ export const ANATOMICAL_BODY_SYSTEMS: OrganSystemInfo[] = [
     nasaHrpCitation: 'NASA Space Food Systems & Clinical Nutrition Guidelines (HRP-NUTR-2026)'
   }
 ];
+

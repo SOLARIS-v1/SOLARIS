@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard,
@@ -43,10 +43,10 @@ export default function Sidebar() {
 
   React.useEffect(() => {
     const handleUpdate = () => setProfile(getAstronautProfile());
-    window.addEventListener('astra_health_update', handleUpdate);
+    window.addEventListener('solaris_health_update', handleUpdate);
     window.addEventListener('storage', handleUpdate);
     return () => {
-      window.removeEventListener('astra_health_update', handleUpdate);
+      window.removeEventListener('solaris_health_update', handleUpdate);
       window.removeEventListener('storage', handleUpdate);
     };
   }, []);
@@ -72,7 +72,7 @@ export default function Sidebar() {
             {!collapsed && (
               <div className="transition-opacity duration-200">
                 <span className="font-orbitron font-extrabold text-sm text-[#F5F0E9] tracking-wider">
-                  ASTRA<span className="text-[#D5BDA4]">HEALTH</span>
+                  SOLARIS
                 </span>
                 <span className="block text-[9px] font-mono text-[#D5BDA4]/80 uppercase">
                   Mission Control
@@ -104,7 +104,7 @@ export default function Sidebar() {
                 <div className="text-xs font-semibold text-[#F5F0E9] truncate">{profile.name}</div>
                 <div className="text-[10px] font-mono text-[#D5BDA4] flex items-center gap-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#4E7D63]" />
-                  {profile.callsign} • Day {profile.missionDay}
+                  {profile.callsign} â€¢ Day {profile.missionDay}
                 </div>
               </div>
             </div>
@@ -191,3 +191,5 @@ export default function Sidebar() {
     </>
   );
 }
+
+

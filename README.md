@@ -14,7 +14,6 @@ Designed for deep-space missions operating under high communication latency or c
 ## Live Resources
 
 * **Repository:** [https://github.com/SOLARIS-v1/demo-repository](https://github.com/SOLARIS-v1/demo-repository)
-* **Video Walkthrough & UI Prototype Demo:** [Watch SOLARIS on YouTube](https://www.youtube.com/watch?v=bbZLEXe4MnQ)
 
 ---
 

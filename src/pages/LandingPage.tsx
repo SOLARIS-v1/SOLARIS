@@ -1,5 +1,5 @@
-﻿import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Activity,
   Shield,
@@ -13,7 +13,6 @@ import {
   FileText
 } from 'lucide-react';
 import Navbar from '../components/layout/Navbar';
-import { resetDemoData } from '../utils/localStorage';
 import { NASA_FIVE_HAZARDS } from '../data/hazardData';
 import { sound } from '../utils/audio';
 import homepageBg from '../assets/homepage-bg.jpg';
@@ -21,13 +20,6 @@ import SaturnHeroCanvas from '../components/home/SaturnHeroCanvas';
 import { ThreeErrorBoundary } from '../components/body-explorer/ThreeErrorBoundary';
 
 export default function LandingPage() {
-  const navigate = useNavigate();
-
-  const handleLaunchJudgeDemo = () => {
-    sound.playSuccess();
-    resetDemoData();
-    navigate('/dashboard');
-  };
 
   return (
     <div className="min-h-screen relative bg-[#F5F0E9] text-[#33302E] selection:bg-[#D5BDA4] selection:text-[#542B38] overflow-x-hidden">
@@ -96,27 +88,6 @@ export default function LandingPage() {
             <p className="text-base sm:text-lg text-[#262320] max-w-xl leading-relaxed font-sans font-medium">
               SOLARIS — Spaceflight Onboard Local Autonomous Readiness & Intelligence System — is an autonomous, mission-grade physiological monitoring platform designed for astronauts on long-duration lunar, Martian, and deep-space missions. Real-time telemetry, 3D anatomical tracking, and intelligent early warning countermeasure protocols.
             </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 pt-2">
-              <button
-                onClick={handleLaunchJudgeDemo}
-                className="relative group flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#542B38] hover:bg-[#3E1F29] text-[#F5F0E9] font-bold text-sm tracking-wide transition-all shadow-warm hover:shadow-warm-md hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#542B38]"
-              >
-                <Sparkles className="w-4 h-4 text-[#D5BDA4] group-hover:rotate-12 transition-transform" />
-                <span>Explore Judge Demo Mode</span>
-                <ArrowRight className="w-4 h-4 text-[#F5F0E9] group-hover:translate-x-1 transition-transform" />
-              </button>
-
-              <Link
-                to="/body-explorer"
-                onClick={() => sound.playClick()}
-                className="flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#FFFCF8] hover:bg-[#FAF5EE] border border-[#E4DAD0] hover:border-[#D5BDA4] text-[#542B38] font-bold text-sm tracking-wide transition-all shadow-warm-sm hover:shadow-warm hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D5BDA4]"
-              >
-                <Brain className="w-4 h-4 text-[#542B38]" />
-                <span>Explore 3D Body</span>
-              </Link>
-            </div>
 
             {/* Quick stats / metrics bar */}
             <div className="grid grid-cols-3 gap-3 pt-6 border-t border-[#D5BDA4]/60 max-w-xl">
@@ -588,25 +559,6 @@ export default function LandingPage() {
               Launch into the simulated Artemis III mission scenario with pre-calibrated cardiovascular telemetry, microgravity fluid shifts, and NASA research dossiers.
             </p>
           </div>
-
-          <div className="relative z-10 flex flex-wrap items-center gap-3">
-            <button
-              onClick={handleLaunchJudgeDemo}
-              className="flex items-center gap-2 px-6 py-3 rounded-xl bg-[#D5BDA4] hover:bg-[#EAE0D5] text-[#542B38] font-bold text-xs font-mono tracking-wider transition-all shadow-warm-sm hover:shadow-warm hover:-translate-y-0.5"
-            >
-              <Sparkles className="w-4 h-4 text-[#542B38]" />
-              <span>Launch Judge Demo</span>
-              <ArrowRight className="w-4 h-4 text-[#542B38]" />
-            </button>
-            <Link
-              to="/body-explorer"
-              onClick={() => sound.playClick()}
-              className="flex items-center gap-2 px-5 py-3 rounded-xl bg-[#3E1F29] hover:bg-[#2E151E] border border-[#D5BDA4]/40 hover:border-[#D5BDA4] text-[#F5F0E9] font-bold text-xs font-mono tracking-wider transition-all"
-            >
-              <Brain className="w-4 h-4 text-[#D5BDA4]" />
-              <span>Explore 3D Body</span>
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -645,14 +597,8 @@ export default function LandingPage() {
           <div>
             <div className="text-[#F5F0E9] font-bold mb-3 uppercase tracking-wider">Hackathon Demo</div>
             <p className="text-[#D5BDA4]/80 mb-3">
-              One-click preset loads Commander Alex profile and Artemis mission scenario.
+              Prototype built for the 2026 NASA Space Apps Challenge simulating autonomous deep-space mission telemetry.
             </p>
-            <button
-              onClick={handleLaunchJudgeDemo}
-              className="px-3.5 py-1.5 rounded-lg bg-[#3E1F29] border border-[#D5BDA4]/40 text-[#F5F0E9] hover:bg-[#D5BDA4] hover:text-[#542B38] font-bold transition shadow-warm-sm"
-            >
-              Launch Judge Demo Mode
-            </button>
           </div>
         </div>
 

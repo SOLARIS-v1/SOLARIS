@@ -41,12 +41,6 @@ export default function LoginPage() {
     navigate('/dashboard');
   };
 
-  const handleOneClickDemo = () => {
-    sound.playSuccess();
-    resetDemoData();
-    navigate('/dashboard');
-  };
-
   return (
     <div className="min-h-screen bg-[#F5F0E9] flex flex-col justify-center items-center px-4 py-12 relative overflow-hidden select-none">
       {/* Background ambient */}
@@ -78,20 +72,12 @@ export default function LoginPage() {
               <ShieldCheck className="w-4 h-4 text-[#542B38]" />
               Preloaded Demo Credentials
             </span>
-            <span className="text-[10px] bg-[#542B38] px-2 py-0.5 rounded text-[#F5F0E9] font-bold">JUDGE READY</span>
+            <span className="text-[10px] bg-[#542B38] px-2 py-0.5 rounded text-[#F5F0E9] font-bold">SAMPLE LOGIN</span>
           </div>
           <div className="text-[#817A76] space-y-0.5 text-[11px]">
             <div>Email: <span className="text-[#33302E] font-semibold">commander.alex@artemis.nasa.gov</span></div>
             <div>Password: <span className="text-[#33302E] font-semibold">demo12345</span></div>
           </div>
-          <button
-            type="button"
-            onClick={handleOneClickDemo}
-            className="w-full mt-2.5 py-1.5 px-3 rounded-lg bg-[#542B38] hover:bg-[#6B3547] border border-[#A56F73]/30 text-[#F5F0E9] text-xs font-bold transition flex items-center justify-center gap-1.5"
-          >
-            <Sparkles className="w-3.5 h-3.5 text-[#D5BDA4]" />
-            <span>1-Click Launch Judge Demo</span>
-          </button>
         </div>
 
         {/* Form */}

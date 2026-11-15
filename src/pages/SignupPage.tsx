@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { User, Mail, Lock, Orbit, ArrowRight, AlertCircle, CheckCircle2 } from 'lucide-react';
 import { setAuthUser, setAstronautProfile, getAstronautProfile } from '../utils/localStorage';

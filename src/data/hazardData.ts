@@ -1,4 +1,4 @@
-﻿import { SpaceHazard, OrganSystemInfo } from '../types';
+import { SpaceHazard, OrganSystemInfo } from '../types';
 
 export const NASA_FIVE_HAZARDS: SpaceHazard[] = [
   {

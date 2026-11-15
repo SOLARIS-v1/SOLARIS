@@ -583,7 +583,7 @@ export default function LandingPage() {
           </div>
 
           <div>
-            <div className="text-[#F5F0E9] font-bold mb-3 uppercase tracking-wider">Navigation</div>
+            <h4 className="text-[#F5F0E9] font-bold mb-3 uppercase tracking-wider cursor-default select-text">Navigation</h4>
             <ul className="space-y-2">
               <li><Link to="/health-monitoring" className="text-[#D5BDA4] hover:text-[#F5F0E9] transition">Health Monitoring</Link></li>
               <li><a href="#hazards" className="text-[#D5BDA4] hover:text-[#F5F0E9] transition">5 Space Hazards</a></li>

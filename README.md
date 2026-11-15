@@ -1,4 +1,4 @@
-﻿# SOLARIS: Spaceflight Onboard Local Autonomous Readiness & Intelligence System
+# SOLARIS: Spaceflight Onboard Local Autonomous Readiness & Intelligence System
 
 [![NASA Space Apps 2026](https://img.shields.io/badge/NASA_Space_Apps-2026_Prototype-0B3D91?style=flat-square&logo=nasa)](https://www.spaceappschallenge.org/)
 [![Status](https://img.shields.io/badge/Build-Prototype_v1.0-2ea44f?style=flat-square)](https://github.com/SOLARIS-v1/demo-repository)

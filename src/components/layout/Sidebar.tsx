@@ -71,10 +71,10 @@ export default function Sidebar() {
             </div>
             {!collapsed && (
               <div className="transition-opacity duration-200">
-                <span className="font-orbitron font-extrabold text-sm text-[#F5F0E9] tracking-wider">
+                <span className="font-orbitron font-extrabold text-sm text-[#FFFFFF] tracking-wider">
                   SOLARIS
                 </span>
-                <span className="block text-[9px] font-mono text-[#D5BDA4]/80 uppercase">
+                <span className="block text-[9px] font-mono text-[#FFF3E3] font-semibold uppercase tracking-wider">
                   Mission Control
                 </span>
               </div>

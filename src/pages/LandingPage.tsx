@@ -82,18 +82,18 @@ export default function LandingPage() {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#33302E] font-orbitron tracking-tight leading-[1.12]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#1E1B18] font-orbitron tracking-tight leading-[1.12]">
               Your Health. <br />
-              <span className="bg-gradient-to-r from-[#542B38] via-[#8A4A5D] to-[#542B38] bg-clip-text text-transparent">
+              <span className="text-[#542B38]">
                 Your Mission.
               </span> <br />
-              <span className="text-[#A56F73]">
+              <span className="text-[#3E1F29]">
                 Our Priority.
               </span>
             </h1>
 
             {/* Description */}
-            <p className="text-base sm:text-lg text-[#524E4B] max-w-xl leading-relaxed font-sans">
+            <p className="text-base sm:text-lg text-[#262320] max-w-xl leading-relaxed font-sans font-medium">
               SOLARIS — Spaceflight Onboard Local Autonomous Readiness & Intelligence System — is an autonomous, mission-grade physiological monitoring platform designed for astronauts on long-duration lunar, Martian, and deep-space missions. Real-time telemetry, 3D anatomical tracking, and intelligent early warning countermeasure protocols.
             </p>
 
@@ -119,30 +119,30 @@ export default function LandingPage() {
             </div>
 
             {/* Quick stats / metrics bar */}
-            <div className="grid grid-cols-3 gap-3 pt-6 border-t border-[#E4DAD0] max-w-xl">
-              <div className="p-3 rounded-xl bg-[#FFFCF8]/80 backdrop-blur-sm border border-[#E4DAD0] shadow-warm-sm hover:border-[#D5BDA4] transition-colors">
+            <div className="grid grid-cols-3 gap-3 pt-6 border-t border-[#D5BDA4]/60 max-w-xl">
+              <div className="p-3 rounded-xl bg-[#FFFCF8]/95 backdrop-blur-sm border border-[#D5BDA4] shadow-warm-sm hover:border-[#542B38] transition-colors">
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-[10px] font-mono text-[#817A76] tracking-wider uppercase font-semibold">HAZARD-TLM</span>
+                  <span className="text-[10px] font-mono text-[#383330] tracking-wider uppercase font-bold">HAZARD-TLM</span>
                   <span className="w-1.5 h-1.5 rounded-full bg-[#542B38]" />
                 </div>
                 <div className="text-2xl font-bold font-orbitron text-[#542B38]">5</div>
-                <div className="text-[11px] font-mono text-[#524E4B] leading-tight">Space Hazards Analyzed</div>
+                <div className="text-[11px] font-mono text-[#1E1B18] font-medium leading-tight">Space Hazards Analyzed</div>
               </div>
-              <div className="p-3 rounded-xl bg-[#FFFCF8]/80 backdrop-blur-sm border border-[#E4DAD0] shadow-warm-sm hover:border-[#D5BDA4] transition-colors">
+              <div className="p-3 rounded-xl bg-[#FFFCF8]/95 backdrop-blur-sm border border-[#D5BDA4] shadow-warm-sm hover:border-[#542B38] transition-colors">
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-[10px] font-mono text-[#817A76] tracking-wider uppercase font-semibold">BIO-SYS</span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#A56F73]" />
+                  <span className="text-[10px] font-mono text-[#383330] tracking-wider uppercase font-bold">BIO-SYS</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#542B38]" />
                 </div>
-                <div className="text-2xl font-bold font-orbitron text-[#A56F73]">6</div>
-                <div className="text-[11px] font-mono text-[#524E4B] leading-tight">Organ Systems Tracked</div>
+                <div className="text-2xl font-bold font-orbitron text-[#542B38]">6</div>
+                <div className="text-[11px] font-mono text-[#1E1B18] font-medium leading-tight">Organ Systems Tracked</div>
               </div>
-              <div className="p-3 rounded-xl bg-[#FFFCF8]/80 backdrop-blur-sm border border-[#E4DAD0] shadow-warm-sm hover:border-[#D5BDA4] transition-colors">
+              <div className="p-3 rounded-xl bg-[#FFFCF8]/95 backdrop-blur-sm border border-[#D5BDA4] shadow-warm-sm hover:border-[#542B38] transition-colors">
                 <div className="flex items-center justify-between mb-1">
-                  <span className="text-[10px] font-mono text-[#817A76] tracking-wider uppercase font-semibold">OFFLINE-PWA</span>
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#4E7D63]" />
+                  <span className="text-[10px] font-mono text-[#383330] tracking-wider uppercase font-bold">OFFLINE-PWA</span>
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#2A6145]" />
                 </div>
-                <div className="text-2xl font-bold font-orbitron text-[#4E7D63]">100%</div>
-                <div className="text-[11px] font-mono text-[#524E4B] leading-tight">Autonomous Flight Ready</div>
+                <div className="text-2xl font-bold font-orbitron text-[#2A6145]">100%</div>
+                <div className="text-[11px] font-mono text-[#1E1B18] font-medium leading-tight">Autonomous Flight Ready</div>
               </div>
             </div>
           </div>
@@ -158,7 +158,7 @@ export default function LandingPage() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#33302E] font-orbitron mt-3 mb-4">
             About SOLARIS
           </h2>
-          <p className="text-[#524E4B] text-sm sm:text-base leading-relaxed font-sans">
+          <p className="text-[#262320] text-sm sm:text-base leading-relaxed font-sans">
             During deep space travel to the Moon or Mars, astronauts cannot quickly return to Earth or dial Mission Control for instantaneous surgery advice. Radio signals take up to 22 minutes one way. SOLARIS bridges this distance with an intelligent, self-contained health platform that monitors vital signs, identifies risks early, and guides astronauts through proactive preventive routines.
           </p>
         </div>
@@ -170,16 +170,16 @@ export default function LandingPage() {
                 <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] text-[#542B38] group-hover:scale-110 transition-transform shadow-warm-sm">
                   <HeartPulse className="w-6 h-6 text-[#542B38]" />
                 </div>
-                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#817A76]">
+                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#403B38]">
                   TLM // 01
                 </span>
               </div>
               <h3 className="text-lg font-bold text-[#542B38] mb-2 font-orbitron">Continuous Vitals Tracking</h3>
-              <p className="text-xs text-[#524E4B] leading-relaxed">
+              <p className="text-xs text-[#262320] leading-relaxed">
                 Track heart rate, blood pressure, blood glucose, core temperature, sleep architecture, and psychological mood with zero medical jargon required.
               </p>
             </div>
-            <div className="pt-4 mt-4 border-t border-[#E4DAD0]/60 flex items-center justify-between text-[11px] font-mono text-[#817A76]">
+            <div className="pt-4 mt-4 border-t border-[#E4DAD0]/60 flex items-center justify-between text-[11px] font-mono text-[#403B38]">
               <span>6 Metric Streams</span>
               <span className="text-[#4E7D63] font-semibold">Autonomous Validation</span>
             </div>
@@ -191,16 +191,16 @@ export default function LandingPage() {
                 <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] text-[#A56F73] group-hover:scale-110 transition-transform shadow-warm-sm">
                   <Brain className="w-6 h-6 text-[#A56F73]" />
                 </div>
-                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#817A76]">
+                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#403B38]">
                   BIO // 02
                 </span>
               </div>
               <h3 className="text-lg font-bold text-[#542B38] mb-2 font-orbitron">Interactive 3D Body Explorer</h3>
-              <p className="text-xs text-[#524E4B] leading-relaxed">
+              <p className="text-xs text-[#262320] leading-relaxed">
                 Explore a 3D anatomical model with clickable organs to learn exactly how microgravity fluid shifts, cosmic radiation, and bone loss affect individual body systems.
               </p>
             </div>
-            <div className="pt-4 mt-4 border-t border-[#E4DAD0]/60 flex items-center justify-between text-[11px] font-mono text-[#817A76]">
+            <div className="pt-4 mt-4 border-t border-[#E4DAD0]/60 flex items-center justify-between text-[11px] font-mono text-[#403B38]">
               <span>Three.js Engine</span>
               <span className="text-[#A56F73] font-semibold">6 Organ Systems</span>
             </div>
@@ -212,16 +212,16 @@ export default function LandingPage() {
                 <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] text-[#4E7D63] group-hover:scale-110 transition-transform shadow-warm-sm">
                   <Shield className="w-6 h-6 text-[#4E7D63]" />
                 </div>
-                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#817A76]">
+                <span className="text-[10px] font-mono font-bold px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#403B38]">
                   TRG // 03
                 </span>
               </div>
               <h3 className="text-lg font-bold text-[#542B38] mb-2 font-orbitron">Smart Early Warning System</h3>
-              <p className="text-xs text-[#524E4B] leading-relaxed">
+              <p className="text-xs text-[#262320] leading-relaxed">
                 Algorithmic triage alerts astronauts to subtle cardiovascular or sleep trends before they develop into mission-jeopardizing medical events.
               </p>
             </div>
-            <div className="pt-4 mt-4 border-t border-[#E4DAD0]/60 flex items-center justify-between text-[11px] font-mono text-[#817A76]">
+            <div className="pt-4 mt-4 border-t border-[#E4DAD0]/60 flex items-center justify-between text-[11px] font-mono text-[#403B38]">
               <span>Clinical Triage</span>
               <span className="text-[#4E7D63] font-semibold">Zero Telemetry Latency</span>
             </div>
@@ -239,7 +239,7 @@ export default function LandingPage() {
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#33302E] font-orbitron mt-3 mb-6">
               Why Astronaut Health Monitoring Matters
             </h2>
-            <div className="space-y-4 text-sm text-[#524E4B]">
+            <div className="space-y-4 text-sm text-[#262320]">
               <p className="leading-relaxed">
                 Human physiology evolved over millions of years inside Earthâ€™s protective 1-G gravity field and atmospheric radiation shield. When those protections are stripped away, the human body begins adapting rapidly:
               </p>
@@ -268,7 +268,7 @@ export default function LandingPage() {
             <div className="space-y-3.5 font-mono text-xs">
               <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] space-y-1.5">
                 <div className="flex justify-between items-center">
-                  <span className="text-[#817A76]">Monthly Bone Density Loss</span>
+                  <span className="text-[#403B38]">Monthly Bone Density Loss</span>
                   <span className="text-[#B87D3B] font-bold">1.0% â€“ 1.5%</span>
                 </div>
                 <div className="w-full bg-[#E4DAD0] h-1.5 rounded-full overflow-hidden">
@@ -278,7 +278,7 @@ export default function LandingPage() {
 
               <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] space-y-1.5">
                 <div className="flex justify-between items-center">
-                  <span className="text-[#817A76]">Cephalic Fluid Shift</span>
+                  <span className="text-[#403B38]">Cephalic Fluid Shift</span>
                   <span className="text-[#542B38] font-bold">~ 2.0 Liters</span>
                 </div>
                 <div className="w-full bg-[#E4DAD0] h-1.5 rounded-full overflow-hidden">
@@ -288,7 +288,7 @@ export default function LandingPage() {
 
               <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] space-y-1.5">
                 <div className="flex justify-between items-center">
-                  <span className="text-[#817A76]">Daily Countermeasure Exercise</span>
+                  <span className="text-[#403B38]">Daily Countermeasure Exercise</span>
                   <span className="text-[#4E7D63] font-bold">2.5 Hours Mandatory</span>
                 </div>
                 <div className="w-full bg-[#E4DAD0] h-1.5 rounded-full overflow-hidden">
@@ -298,7 +298,7 @@ export default function LandingPage() {
 
               <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] space-y-1.5">
                 <div className="flex justify-between items-center">
-                  <span className="text-[#817A76]">Mars Comms Latency (One-Way)</span>
+                  <span className="text-[#403B38]">Mars Comms Latency (One-Way)</span>
                   <span className="text-[#A56F73] font-bold">Up to 22 Minutes</span>
                 </div>
                 <div className="w-full bg-[#E4DAD0] h-1.5 rounded-full overflow-hidden">
@@ -307,7 +307,7 @@ export default function LandingPage() {
               </div>
             </div>
 
-            <div className="pt-2 text-[10px] font-mono text-[#817A76] flex items-center justify-between border-t border-[#E4DAD0]/60">
+            <div className="pt-2 text-[10px] font-mono text-[#403B38] flex items-center justify-between border-t border-[#E4DAD0]/60">
               <span>Standard: NASA-STD-3001</span>
               <span>Autonomous AMDS Level 4</span>
             </div>
@@ -324,7 +324,7 @@ export default function LandingPage() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#33302E] font-orbitron mt-3 mb-4">
             The Five Hazards of Human Spaceflight
           </h2>
-          <p className="text-[#524E4B] text-sm sm:text-base leading-relaxed">
+          <p className="text-[#262320] text-sm sm:text-base leading-relaxed">
             NASA's Human Research Program classifies space exploration risks into five distinct hazards. SOLARIS monitors indicators for every hazard category.
           </p>
         </div>
@@ -346,16 +346,16 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-lg font-bold text-[#33302E] font-orbitron mb-1 group-hover:text-[#542B38] transition-colors">{hazard.title}</h3>
                 <p className="text-xs text-[#A56F73] font-mono font-semibold mb-3">{hazard.tagline}</p>
-                <div className="text-xs text-[#524E4B] bg-[#FAF5EE] border border-[#E4DAD0] p-2.5 rounded-lg mb-4">
+                <div className="text-xs text-[#262320] bg-[#FAF5EE] border border-[#E4DAD0] p-2.5 rounded-lg mb-4">
                   <strong className="text-[#542B38]">Associated Risk:</strong> {hazard.primaryRisk}
                 </div>
-                <p className="text-xs text-[#524E4B] leading-relaxed mb-4">
+                <p className="text-xs text-[#262320] leading-relaxed mb-4">
                   {hazard.description}
                 </p>
               </div>
 
               <div className="pt-4 border-t border-[#E4DAD0] flex items-center justify-between text-xs font-mono">
-                <span className="text-[#817A76]">Indicators: <strong className="text-[#542B38]">{hazard.monitoredIndicators.length}</strong> monitored</span>
+                <span className="text-[#403B38]">Indicators: <strong className="text-[#542B38]">{hazard.monitoredIndicators.length}</strong> monitored</span>
                 <Link
                   to="/hazards"
                   onClick={() => sound.playClick()}
@@ -397,7 +397,7 @@ export default function LandingPage() {
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#33302E] font-orbitron mt-3 mb-4">
               Core Capabilities &amp; Features
             </h2>
-            <p className="text-[#524E4B] text-sm">
+            <p className="text-[#262320] text-sm">
               Engineered with medical clarity, offline autonomy, and mission control precision.
             </p>
           </div>
@@ -409,14 +409,14 @@ export default function LandingPage() {
                   <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] text-[#542B38] group-hover:scale-110 transition-transform shadow-warm-sm">
                     <HeartPulse className="w-5 h-5 text-[#542B38]" />
                   </div>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#817A76]">Range Validation</span>
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#403B38]">Range Validation</span>
                 </div>
                 <h3 className="text-base font-bold text-[#542B38] font-orbitron mb-1.5">Health Monitoring</h3>
-                <p className="text-xs text-[#524E4B] leading-relaxed">
+                <p className="text-xs text-[#262320] leading-relaxed">
                   Record resting heart rate, blood pressure, glucose, temperature, sleep, and mood with instant physiological range checks.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-[#E4DAD0]/60 text-[11px] font-mono text-[#817A76] flex items-center justify-between">
+              <div className="mt-4 pt-3 border-t border-[#E4DAD0]/60 text-[11px] font-mono text-[#403B38] flex items-center justify-between">
                 <span>6 Vitals</span>
                 <span className="text-[#4E7D63] font-semibold">Active Monitoring</span>
               </div>
@@ -428,14 +428,14 @@ export default function LandingPage() {
                   <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] text-[#A56F73] group-hover:scale-110 transition-transform shadow-warm-sm">
                     <Brain className="w-5 h-5 text-[#A56F73]" />
                   </div>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#817A76]">WebGL Three.js</span>
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#403B38]">WebGL Three.js</span>
                 </div>
                 <h3 className="text-base font-bold text-[#542B38] font-orbitron mb-1.5">Interactive 3D Body</h3>
-                <p className="text-xs text-[#524E4B] leading-relaxed">
+                <p className="text-xs text-[#262320] leading-relaxed">
                   Clickable 3D anatomical model with 6 organ systems: Brain, Heart, Lungs, Bones, Muscles, and Digestive system.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-[#E4DAD0]/60 text-[11px] font-mono text-[#817A76] flex items-center justify-between">
+              <div className="mt-4 pt-3 border-t border-[#E4DAD0]/60 text-[11px] font-mono text-[#403B38] flex items-center justify-between">
                 <span>R3F Pipeline</span>
                 <span className="text-[#A56F73] font-semibold">Real-time Raycasting</span>
               </div>
@@ -447,14 +447,14 @@ export default function LandingPage() {
                   <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] text-[#B87D3B] group-hover:scale-110 transition-transform shadow-warm-sm">
                     <Sparkles className="w-5 h-5 text-[#B87D3B]" />
                   </div>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#817A76]">Clinical Triage</span>
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#403B38]">Clinical Triage</span>
                 </div>
                 <h3 className="text-base font-bold text-[#542B38] font-orbitron mb-1.5">Smart Health Insights</h3>
-                <p className="text-xs text-[#524E4B] leading-relaxed">
+                <p className="text-xs text-[#262320] leading-relaxed">
                   Green, Yellow, and Red rule-based triage flags physiological drift and connects readings with NASA space hazards.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-[#E4DAD0]/60 text-[11px] font-mono text-[#817A76] flex items-center justify-between">
+              <div className="mt-4 pt-3 border-t border-[#E4DAD0]/60 text-[11px] font-mono text-[#403B38] flex items-center justify-between">
                 <span>Tri-Color Alert</span>
                 <span className="text-[#B87D3B] font-semibold">Space Hazard Mapping</span>
               </div>
@@ -466,14 +466,14 @@ export default function LandingPage() {
                   <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] text-[#542B38] group-hover:scale-110 transition-transform shadow-warm-sm">
                     <Activity className="w-5 h-5 text-[#542B38]" />
                   </div>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#817A76]">Recharts Engine</span>
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#403B38]">Recharts Engine</span>
                 </div>
                 <h3 className="text-base font-bold text-[#542B38] font-orbitron mb-1.5">Dynamic Analytics</h3>
-                <p className="text-xs text-[#524E4B] leading-relaxed">
+                <p className="text-xs text-[#262320] leading-relaxed">
                   Interactive charts powered by Recharts with filters for Today, 7 Days, and 30 Days with multi-stage sleep architecture.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-[#E4DAD0]/60 text-[11px] font-mono text-[#817A76] flex items-center justify-between">
+              <div className="mt-4 pt-3 border-t border-[#E4DAD0]/60 text-[11px] font-mono text-[#403B38] flex items-center justify-between">
                 <span>Multi-window Filter</span>
                 <span className="text-[#542B38] font-semibold">Circadian Sleep Trends</span>
               </div>
@@ -485,14 +485,14 @@ export default function LandingPage() {
                   <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] text-[#4E7D63] group-hover:scale-110 transition-transform shadow-warm-sm">
                     <Calendar className="w-5 h-5 text-[#4E7D63]" />
                   </div>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#817A76]">ARED Protocol</span>
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#403B38]">ARED Protocol</span>
                 </div>
                 <h3 className="text-base font-bold text-[#542B38] font-orbitron mb-1.5">Daily Mission Routine</h3>
-                <p className="text-xs text-[#524E4B] leading-relaxed">
+                <p className="text-xs text-[#262320] leading-relaxed">
                   Flight checklist for vitals, ARED resistance workouts, hydration packets, and earn achievement badges like Health Guardian.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-[#E4DAD0]/60 text-[11px] font-mono text-[#817A76] flex items-center justify-between">
+              <div className="mt-4 pt-3 border-t border-[#E4DAD0]/60 text-[11px] font-mono text-[#403B38] flex items-center justify-between">
                 <span>Checklist Engine</span>
                 <span className="text-[#4E7D63] font-semibold">Gamified Badges</span>
               </div>
@@ -504,14 +504,14 @@ export default function LandingPage() {
                   <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] text-[#A56F73] group-hover:scale-110 transition-transform shadow-warm-sm">
                     <FileText className="w-5 h-5 text-[#A56F73]" />
                   </div>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#817A76]">Dossier Export</span>
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#403B38]">Dossier Export</span>
                 </div>
                 <h3 className="text-base font-bold text-[#542B38] font-orbitron mb-1.5">Mission Health Reports</h3>
-                <p className="text-xs text-[#524E4B] leading-relaxed">
+                <p className="text-xs text-[#262320] leading-relaxed">
                   Export telemetry to CSV and print mission dossiers formatted for flight surgeons and medical officers.
                 </p>
               </div>
-              <div className="mt-4 pt-3 border-t border-[#E4DAD0]/60 text-[11px] font-mono text-[#817A76] flex items-center justify-between">
+              <div className="mt-4 pt-3 border-t border-[#E4DAD0]/60 text-[11px] font-mono text-[#403B38] flex items-center justify-between">
                 <span>CSV &amp; Print CSS</span>
                 <span className="text-[#A56F73] font-semibold">Clinical Formats</span>
               </div>
@@ -529,7 +529,7 @@ export default function LandingPage() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-[#33302E] font-orbitron mt-3 mb-4">
             How It Works
           </h2>
-          <p className="text-[#524E4B] text-sm">
+          <p className="text-[#262320] text-sm">
             Four simple steps to maintain peak physical and psychological health in deep space.
           </p>
         </div>
@@ -538,7 +538,7 @@ export default function LandingPage() {
           <div className="p-6 rounded-2xl bg-[#FFFCF8] border border-[#E4DAD0] hover:border-[#D5BDA4] transition-all duration-300 shadow-warm hover:shadow-warm-lg hover:-translate-y-1 relative group">
             <span className="text-3xl font-extrabold text-[#D5BDA4] group-hover:text-[#542B38] transition-colors font-orbitron block mb-2">01</span>
             <h3 className="text-base font-bold text-[#542B38] mb-2 font-orbitron">Enter Measurements</h3>
-            <p className="text-xs text-[#524E4B] leading-relaxed">
+            <p className="text-xs text-[#262320] leading-relaxed">
               Log daily vital signs, sleep hours, and subjective mood in seconds using calibrated flight forms.
             </p>
           </div>
@@ -546,7 +546,7 @@ export default function LandingPage() {
           <div className="p-6 rounded-2xl bg-[#FFFCF8] border border-[#E4DAD0] hover:border-[#D5BDA4] transition-all duration-300 shadow-warm hover:shadow-warm-lg hover:-translate-y-1 relative group">
             <span className="text-3xl font-extrabold text-[#D5BDA4] group-hover:text-[#542B38] transition-colors font-orbitron block mb-2">02</span>
             <h3 className="text-base font-bold text-[#542B38] mb-2 font-orbitron">Review Indicators</h3>
-            <p className="text-xs text-[#524E4B] leading-relaxed">
+            <p className="text-xs text-[#262320] leading-relaxed">
               Examine live metric cards with sparklines, status pills, and previous reading comparisons.
             </p>
           </div>
@@ -554,7 +554,7 @@ export default function LandingPage() {
           <div className="p-6 rounded-2xl bg-[#FFFCF8] border border-[#E4DAD0] hover:border-[#D5BDA4] transition-all duration-300 shadow-warm hover:shadow-warm-lg hover:-translate-y-1 relative group">
             <span className="text-3xl font-extrabold text-[#D5BDA4] group-hover:text-[#542B38] transition-colors font-orbitron block mb-2">03</span>
             <h3 className="text-base font-bold text-[#542B38] mb-2 font-orbitron">Understand Trends</h3>
-            <p className="text-xs text-[#524E4B] leading-relaxed">
+            <p className="text-xs text-[#262320] leading-relaxed">
               Track 7-day and 30-day analytics charts to spot gradual physiological adaptations over time.
             </p>
           </div>
@@ -562,7 +562,7 @@ export default function LandingPage() {
           <div className="p-6 rounded-2xl bg-[#FFFCF8] border border-[#E4DAD0] hover:border-[#D5BDA4] transition-all duration-300 shadow-warm hover:shadow-warm-lg hover:-translate-y-1 relative group">
             <span className="text-3xl font-extrabold text-[#D5BDA4] group-hover:text-[#542B38] transition-colors font-orbitron block mb-2">04</span>
             <h3 className="text-base font-bold text-[#542B38] mb-2 font-orbitron">Follow Guidance</h3>
-            <p className="text-xs text-[#524E4B] leading-relaxed">
+            <p className="text-xs text-[#262320] leading-relaxed">
               Execute prescribed countermeasure workouts, hydration packs, and circadian lighting protocols.
             </p>
           </div>
@@ -667,4 +667,5 @@ export default function LandingPage() {
     </div>
   );
 }
+
 

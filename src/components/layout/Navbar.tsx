@@ -44,29 +44,29 @@ export default function Navbar() {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="font-orbitron font-extrabold tracking-wider text-lg text-[#F5F0E9]">
+              <span className="font-orbitron font-extrabold tracking-wider text-lg text-[#FFFFFF]">
                 SOLARIS
               </span>
-              <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-[#3E1F29] border border-[#6E3B4B] text-[#D5BDA4] font-semibold">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#3E1F29] border border-[#D5BDA4]/60 text-[#FFF3E3] font-bold tracking-wider">
                 NASA 2026
               </span>
             </div>
-            <p className="text-[10px] text-[#D5BDA4]/80 font-mono tracking-tight hidden sm:block">
+            <p className="text-[11px] text-[#FFFFFF] font-mono tracking-tight font-semibold hidden sm:block drop-shadow-sm">
               Your Health. Your Mission. Our Priority.
             </p>
           </div>
         </Link>
 
         {/* Center Nav Links */}
-        <div className="hidden md:flex items-center gap-1.5 text-xs lg:text-sm font-medium">
-          <a href="#about" onClick={(e) => scrollToSection('about', e)} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#F5F0E9]/90 hover:text-[#F5F0E9] transition-all">About</a>
-          <a href="#hazards" onClick={(e) => scrollToSection('hazards', e)} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#F5F0E9]/90 hover:text-[#F5F0E9] transition-all">5 Space Hazards</a>
-          <a href="#features" onClick={(e) => scrollToSection('features', e)} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#F5F0E9]/90 hover:text-[#F5F0E9] transition-all">Capabilities</a>
-          <Link to="/body-explorer" onClick={() => sound.playClick()} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#D5BDA4] hover:text-[#F5F0E9] transition-all flex items-center gap-1.5 font-semibold">
-            <Sparkles className="w-3.5 h-3.5 text-[#D5BDA4]" />
+        <div className="hidden md:flex items-center gap-1.5 text-xs lg:text-sm font-semibold">
+          <a href="#about" onClick={(e) => scrollToSection('about', e)} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#FFFFFF] hover:text-[#FFF3E3] transition-all">About</a>
+          <a href="#hazards" onClick={(e) => scrollToSection('hazards', e)} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#FFFFFF] hover:text-[#FFF3E3] transition-all">5 Space Hazards</a>
+          <a href="#features" onClick={(e) => scrollToSection('features', e)} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#FFFFFF] hover:text-[#FFF3E3] transition-all">Capabilities</a>
+          <Link to="/body-explorer" onClick={() => sound.playClick()} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#FFF3E3] hover:text-[#FFFFFF] transition-all flex items-center gap-1.5 font-bold">
+            <Sparkles className="w-3.5 h-3.5 text-[#FFF3E3]" />
             <span>3D Human Explorer</span>
           </Link>
-          <Link to="/hazards" onClick={() => sound.playClick()} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#F5F0E9]/90 hover:text-[#F5F0E9] transition-all">NASA Research</Link>
+          <Link to="/hazards" onClick={() => sound.playClick()} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#FFFFFF] hover:text-[#FFF3E3] transition-all">NASA Research</Link>
         </div>
 
         {/* Action CTAs */}

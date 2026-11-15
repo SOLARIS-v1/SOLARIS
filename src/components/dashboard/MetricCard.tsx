@@ -102,7 +102,7 @@ export default function MetricCard({ summary, icon, onClick }: MetricCardProps) 
           <span className="text-3xl font-extrabold text-[#33302E] font-orbitron tracking-tight">
             {summary.current}
           </span>
-          <span className="text-xs font-mono font-medium text-[#817A76]">
+          <span className="text-xs font-mono font-bold text-[#403B38]">
             {summary.unit}
           </span>
         </div>
@@ -133,16 +133,16 @@ export default function MetricCard({ summary, icon, onClick }: MetricCardProps) 
       </div>
 
       {/* Bottom Telemetry Footer */}
-      <div className="flex items-center justify-between pt-2.5 border-t border-[#E4DAD0] text-xs font-mono text-[#817A76]">
+      <div className="flex items-center justify-between pt-2.5 border-t border-[#E4DAD0] text-xs font-mono text-[#403B38]">
         <div className="flex items-center gap-1">
           {summary.trend === 'up' && <ArrowUpRight className="w-3.5 h-3.5 text-[#542B38]" />}
           {summary.trend === 'down' && <ArrowDownRight className="w-3.5 h-3.5 text-[#542B38]" />}
-          {summary.trend === 'stable' && <Minus className="w-3.5 h-3.5 text-[#817A76]" />}
-          <span className="text-[#33302E] font-medium">{summary.delta}</span>
+          {summary.trend === 'stable' && <Minus className="w-3.5 h-3.5 text-[#403B38]" />}
+          <span className="text-[#1E1B18] font-bold">{summary.delta}</span>
         </div>
 
-        <div className="text-[11px] text-[#817A76]">
-          Prev: <span className="text-[#33302E] font-medium">{summary.previous} {summary.unit !== 'State' ? summary.unit : ''}</span>
+        <div className="text-[11px] text-[#403B38]">
+          Prev: <span className="text-[#1E1B18] font-bold">{summary.previous} {summary.unit !== 'State' ? summary.unit : ''}</span>
         </div>
       </div>
     </div>

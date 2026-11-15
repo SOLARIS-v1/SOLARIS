@@ -1,7 +1,7 @@
-# SOLARIS: Spaceflight Onboard Local Autonomous Readiness & Intelligence System
+﻿# SOLARIS: Spaceflight Onboard Local Autonomous Readiness & Intelligence System
 
 [![NASA Space Apps 2026](https://img.shields.io/badge/NASA_Space_Apps-2026_Prototype-0B3D91?style=flat-square&logo=nasa)](https://www.spaceappschallenge.org/)
-[![Status](https://img.shields.io/badge/Build-Prototype_v1.0-2ea44f?style=flat-square)](https://github.com/ASTRA-V1/demo-repository)
+[![Status](https://img.shields.io/badge/Build-Prototype_v1.0-2ea44f?style=flat-square)](https://github.com/SOLARIS-v1/demo-repository)
 [![YouTube Demo](https://img.shields.io/badge/Demo-Watch_on_YouTube-FF0000?style=flat-square&logo=youtube)](https://www.youtube.com/watch?v=bbZLEXe4MnQ)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
@@ -13,7 +13,7 @@ Designed for deep-space missions operating under high communication latency or c
 
 ## Live Resources
 
-* **Repository:** [https://github.com/ASTRA-V1/demo-repository](https://github.com/ASTRA-V1/demo-repository)
+* **Repository:** [https://github.com/SOLARIS-v1/demo-repository](https://github.com/SOLARIS-v1/demo-repository)
 * **Video Walkthrough & UI Prototype Demo:** [Watch SOLARIS on YouTube](https://www.youtube.com/watch?v=bbZLEXe4MnQ)
 
 ---
@@ -37,12 +37,12 @@ SOLARIS monitors six core physiological and behavioral indicators continuously, 
 
 | Indicator | Metric Key | Green (Nominal) | Yellow (Caution) | Red (Critical) |
 | :--- | :--- | :--- | :--- | :--- |
-| **Blood Pressure** | `systolic_bp_mmhg` / `diastolic_bp_mmhg` | 90–119 / 60–79 mmHg | 120–139 / 80–89 mmHg | >= 140 / >= 90 or < 90 / < 60 mmHg |
-| **Heart Rate** | `heart_rate_bpm` | 55–85 bpm | 86–100 or 48–54 bpm | > 100 or < 48 bpm |
-| **Blood Sugar (Fasting)** | `blood_sugar_mg_dl` | 70–99 mg/dL | 100–125 or 60–69 mg/dL | >= 126 or < 60 mg/dL |
-| **Body Temperature** | `body_temp_c` | 36.1–37.2 °C | 37.3–38.0 or 35.5–36.0 °C | > 38.0 or < 35.5 °C |
-| **Sleep Duration** | `sleep_hours` | 7.0–8.5 hrs/day | 5.5–6.9 or 8.6–9.5 hrs/day | < 5.5 or > 9.5 hrs/day |
-| **Mood & Readiness** | `mood_score_1_10` | 7–10 | 4–6 | 1–3 |
+| **Blood Pressure** | `systolic_bp_mmhg` / `diastolic_bp_mmhg` | 90â€“119 / 60â€“79 mmHg | 120â€“139 / 80â€“89 mmHg | >= 140 / >= 90 or < 90 / < 60 mmHg |
+| **Heart Rate** | `heart_rate_bpm` | 55â€“85 bpm | 86â€“100 or 48â€“54 bpm | > 100 or < 48 bpm |
+| **Blood Sugar (Fasting)** | `blood_sugar_mg_dl` | 70â€“99 mg/dL | 100â€“125 or 60â€“69 mg/dL | >= 126 or < 60 mg/dL |
+| **Body Temperature** | `body_temp_c` | 36.1â€“37.2 Â°C | 37.3â€“38.0 or 35.5â€“36.0 Â°C | > 38.0 or < 35.5 Â°C |
+| **Sleep Duration** | `sleep_hours` | 7.0â€“8.5 hrs/day | 5.5â€“6.9 or 8.6â€“9.5 hrs/day | < 5.5 or > 9.5 hrs/day |
+| **Mood & Readiness** | `mood_score_1_10` | 7â€“10 | 4â€“6 | 1â€“3 |
 
 ---
 
@@ -50,7 +50,7 @@ SOLARIS monitors six core physiological and behavioral indicators continuously, 
 
 ```bash
 # Clone the repository
-git clone https://github.com/ASTRA-V1/demo-repository.git
+git clone https://github.com/SOLARIS-v1/demo-repository.git
 cd demo-repository
 
 # Install dependencies
@@ -69,14 +69,15 @@ npm run build
 
 ```text
 demo-repository/
-├── data/
-│   ├── astronaut_telemetry_14d.csv      # 14-day simulated crew vitals, radiation & ARED logs
-│   ├── anatomy_hazard_mapping.json      # 3D UI region mapping & clinical exam instructions
-│   └── osdr_reference_metadata.json     # Cached metadata from NASA OSD-569, OSD-570 & OSD-575
-├── src/
-│   ├── components/                      # UI components (3D canvas, telemetry, layout)
-│   ├── pages/                           # Dashboard, Hazards, Telemetry, Reports
-│   └── utils/                           # Storage, triage & export utilities
-├── public/                              # 3D models and static assets
-└── README.md
+â”œâ”€â”€ data/
+â”‚   â”œâ”€â”€ astronaut_telemetry_14d.csv      # 14-day simulated crew vitals, radiation & ARED logs
+â”‚   â”œâ”€â”€ anatomy_hazard_mapping.json      # 3D UI region mapping & clinical exam instructions
+â”‚   â””â”€â”€ osdr_reference_metadata.json     # Cached metadata from NASA OSD-569, OSD-570 & OSD-575
+â”œâ”€â”€ src/
+â”‚   â”œâ”€â”€ components/                      # UI components (3D canvas, telemetry, layout)
+â”‚   â”œâ”€â”€ pages/                           # Dashboard, Hazards, Telemetry, Reports
+â”‚   â””â”€â”€ utils/                           # Storage, triage & export utilities
+â”œâ”€â”€ public/                              # 3D models and static assets
+â””â”€â”€ README.md
 ```
+

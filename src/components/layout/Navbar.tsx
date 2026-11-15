@@ -100,12 +100,12 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => sound.playClick()}
-            className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#3E1F29] hover:bg-[#2E151E] border border-[#D5BDA4]/40 hover:border-[#D5BDA4] text-[#F5F0E9] hover:text-[#FFFFFF] text-xs font-mono font-bold tracking-wide transition-all shadow-warm-sm hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D5BDA4]"
+            className="flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-lg bg-[#3E1F29] hover:bg-[#2E151E] border border-[#D5BDA4]/30 hover:border-[#D5BDA4]/60 text-[#F5F0E9] hover:text-[#FFFFFF] font-bold text-xs tracking-wide transition-all shadow-warm-sm hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D5BDA4]"
             title="GitHub Repository"
             aria-label="GitHub Repository"
           >
-            <Github className="w-4 h-4 text-[#D5BDA4]" />
-            <span className="hidden sm:inline">GitHub</span>
+            <Github className="w-4 h-4 text-[#D5BDA4] shrink-0" />
+            <span>GitHub</span>
           </a>
 
           {/* Login Link */}

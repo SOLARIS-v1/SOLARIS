@@ -48,7 +48,7 @@ SOLARIS monitors six core physiological and behavioral indicators continuously, 
 
 ```bash
 # Clone the repository
-git clone https://github.com/SOLARIS-v1/demo-repository.git
+git clone https://github.com/SOLARIS-v1/SOLARIS.git
 cd demo-repository
 
 # Install dependencies

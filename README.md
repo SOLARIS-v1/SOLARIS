@@ -2,7 +2,6 @@
 
 [![NASA Space Apps 2026](https://img.shields.io/badge/NASA_Space_Apps-2026_Prototype-0B3D91?style=flat-square&logo=nasa)](https://www.spaceappschallenge.org/)
 [![Status](https://img.shields.io/badge/Build-Prototype_v1.0-2ea44f?style=flat-square)](https://github.com/SOLARIS-v1/demo-repository)
-[![YouTube Demo](https://img.shields.io/badge/Demo-Watch_on_YouTube-FF0000?style=flat-square&logo=youtube)](https://www.youtube.com/watch?v=bbZLEXe4MnQ)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 
 **SOLARIS (Spaceflight Onboard Local Autonomous Readiness & Intelligence System)** is an autonomous clinical decision-support and health monitoring platform built for the **2026 NASA Space Apps Challenge** (*"Create Health Monitoring Software for Astronauts on Space Missions"*). 

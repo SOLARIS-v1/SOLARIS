@@ -1,5 +1,6 @@
-﻿import React from 'react';
+import React from 'react';
 import { Outlet } from 'react-router-dom';
+import { AlertTriangle } from 'lucide-react';
 import Sidebar from './Sidebar';
 import MissionHeader from './MissionHeader';
 import { SpaceEnvironment } from '../../types';
@@ -23,6 +24,18 @@ export default function DashboardLayout({ onEnvironmentChange }: DashboardLayout
         {/* Sticky top header */}
         <MissionHeader onEnvironmentChange={onEnvironmentChange} />
 
+        {/* Persistent prototype-data notice across all mission console pages */}
+        <div
+          role="status"
+          className="flex items-start gap-2.5 px-6 py-3 bg-[#FFF4DE] border-b border-[#E8C994] text-[#603F13]"
+        >
+          <AlertTriangle className="w-4 h-4 mt-0.5 flex-shrink-0" aria-hidden="true" />
+          <p className="text-xs font-mono leading-relaxed">
+            <strong className="font-bold">DEMO MODE — SIMULATED DATA.</strong>{' '}
+            Health readings, environment telemetry, alerts, and mission activity are sample or manually entered demo data—not live spacecraft telemetry. This educational prototype is not for medical decisions.
+          </p>
+        </div>
+
         {/* Dynamic page content */}
         <main className="flex-1 p-6 md:p-8 max-w-7xl w-full mx-auto animate-in fade-in duration-300">
           <Outlet />
@@ -31,14 +44,13 @@ export default function DashboardLayout({ onEnvironmentChange }: DashboardLayout
         {/* Footer with NASA Space Apps Challenge 2026 branding */}
         <footer className="mt-auto px-6 py-4 border-t border-[#E4DAD0] text-center text-xs font-mono text-[#817A76] flex flex-col sm:flex-row items-center justify-between gap-2 bg-[#FFFCF8]">
           <div className="font-semibold text-[#542B38]">
-            SOLARIS â€¢ NASA Space Apps Challenge 2026 Prototype
+            SOLARIS • NASA Space Apps Challenge 2026 Prototype
           </div>
           <div className="text-[11px] text-[#817A76]">
-            Simulated Prototype Telemetry â€¢ Not For Real Medical Diagnoses
+            Simulated Prototype Telemetry • Not For Real Medical Diagnoses
           </div>
         </footer>
       </div>
     </div>
   );
 }
-

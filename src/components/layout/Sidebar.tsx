@@ -3,9 +3,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard,
   HeartPulse,
-  UserCheck,
   LineChart,
-  ShieldAlert,
   Zap,
   CheckSquare,
   History,
@@ -21,12 +19,17 @@ import {
 import { clearAuthUser, getAstronautProfile } from '../../utils/localStorage';
 import { sound } from '../../utils/audio';
 
-const NAV_ITEMS = [
+interface NavItem {
+  to: string;
+  label: string;
+  icon: any;
+  highlight?: boolean;
+}
+
+const NAV_ITEMS: NavItem[] = [
   { to: '/dashboard', label: 'Overview', icon: LayoutDashboard },
   { to: '/health-monitoring', label: 'Health Monitoring', icon: HeartPulse },
-  { to: '/body-explorer', label: '3D Body Explorer', icon: UserCheck, highlight: true },
   { to: '/analytics', label: 'Health Analytics', icon: LineChart },
-  { to: '/hazards', label: 'Spaceflight Hazards', icon: ShieldAlert },
   { to: '/insights', label: 'Smart Health Insights', icon: Zap },
   { to: '/routine', label: 'Daily Mission Routine', icon: CheckSquare },
   { to: '/history', label: 'Health History', icon: History },

@@ -327,14 +327,6 @@ export default function LandingPage() {
 
               <div className="pt-4 border-t border-[#E4DAD0] flex items-center justify-between text-xs font-mono">
                 <span className="text-[#403B38]">Indicators: <strong className="text-[#542B38]">{hazard.monitoredIndicators.length}</strong> monitored</span>
-                <Link
-                  to="/hazards"
-                  onClick={() => sound.playClick()}
-                  className="text-[#542B38] hover:text-[#A56F73] font-bold flex items-center gap-1 transition-colors group-hover:translate-x-0.5"
-                >
-                  <span>Dossier</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </Link>
               </div>
             </div>
           ))}
@@ -475,11 +467,11 @@ export default function LandingPage() {
                   <div className="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4DAD0] text-[#A56F73] group-hover:scale-110 transition-transform shadow-warm-sm">
                     <FileText className="w-5 h-5 text-[#A56F73]" />
                   </div>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#403B38]">Dossier Export</span>
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-[#FAF5EE] border border-[#E4DAD0] text-[#403B38]">Report Export</span>
                 </div>
                 <h3 className="text-base font-bold text-[#542B38] font-orbitron mb-1.5">Mission Health Reports</h3>
                 <p className="text-xs text-[#262320] leading-relaxed">
-                  Export telemetry to CSV and print mission dossiers formatted for flight surgeons and medical officers.
+                  Export telemetry to CSV and print mission reports formatted for flight surgeons and medical officers.
                 </p>
               </div>
               <div className="mt-4 pt-3 border-t border-[#E4DAD0]/60 text-[11px] font-mono text-[#403B38] flex items-center justify-between">
@@ -556,7 +548,7 @@ export default function LandingPage() {
               Ready to Explore Space Health Telemetry?
             </h3>
             <p className="text-xs sm:text-sm text-[#D5BDA4]/90 max-w-xl font-sans">
-              Launch into the simulated Artemis III mission scenario with pre-calibrated cardiovascular telemetry, microgravity fluid shifts, and NASA research dossiers.
+              Launch into the simulated Artemis III mission scenario with pre-calibrated cardiovascular telemetry, microgravity fluid shifts, and NASA research data.
             </p>
           </div>
         </div>
@@ -578,9 +570,8 @@ export default function LandingPage() {
           <div>
             <div className="text-[#F5F0E9] font-bold mb-3 uppercase tracking-wider">Navigation</div>
             <ul className="space-y-2">
-              <li><Link to="/body-explorer" className="text-[#D5BDA4] hover:text-[#F5F0E9] transition">3D Body Explorer</Link></li>
               <li><Link to="/health-monitoring" className="text-[#D5BDA4] hover:text-[#F5F0E9] transition">Health Monitoring</Link></li>
-              <li><Link to="/hazards" className="text-[#D5BDA4] hover:text-[#F5F0E9] transition">5 Space Hazards</Link></li>
+              <li><a href="#hazards" className="text-[#D5BDA4] hover:text-[#F5F0E9] transition">5 Space Hazards</a></li>
             </ul>
           </div>
 

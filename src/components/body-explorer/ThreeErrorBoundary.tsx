@@ -37,7 +37,7 @@ export class ThreeErrorBoundary extends Component<Props, State> {
           </div>
           <h3 className="text-sm font-bold text-[#33302E] mb-1">WebGL 3D Fallback Mode Active</h3>
           <p className="text-[#817A76] max-w-sm mb-4">
-            System shifted to 2D anatomical schematic mode. All organ sensor telemetry and flight hazard dossiers remain fully accessible.
+            System shifted to 2D anatomical schematic mode. All organ sensor telemetry and flight hazard data remain fully accessible.
           </p>
           <button
             onClick={() => this.setState({ hasError: false })}

@@ -54,11 +54,27 @@ export default function Navbar() {
           <a href="#about" onClick={(e) => scrollToSection('about', e)} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#FFFFFF] hover:text-[#FFF3E3] transition-all">About</a>
           <a href="#hazards" onClick={(e) => scrollToSection('hazards', e)} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#FFFFFF] hover:text-[#FFF3E3] transition-all">5 Space Hazards</a>
           <a href="#features" onClick={(e) => scrollToSection('features', e)} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#FFFFFF] hover:text-[#FFF3E3] transition-all">Capabilities</a>
-          <Link to="/body-explorer" onClick={() => sound.playClick()} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#FFF3E3] hover:text-[#FFFFFF] transition-all flex items-center gap-1.5 font-bold">
+          <button
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              sound.playClick();
+            }}
+            className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#FFF3E3] hover:text-[#FFFFFF] transition-all flex items-center gap-1.5 font-bold cursor-default"
+          >
             <Sparkles className="w-3.5 h-3.5 text-[#FFF3E3]" />
             <span>3D Human Explorer</span>
-          </Link>
-          <Link to="/hazards" onClick={() => sound.playClick()} className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#FFFFFF] hover:text-[#FFF3E3] transition-all">NASA Research</Link>
+          </button>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              sound.playClick();
+            }}
+            className="px-3 py-1.5 rounded-lg hover:bg-[#3E1F29] text-[#FFFFFF] hover:text-[#FFF3E3] transition-all cursor-default"
+          >
+            NASA Research
+          </button>
         </div>
 
         {/* Action CTAs */}
@@ -128,20 +144,20 @@ export default function Navbar() {
             <span>Capabilities &amp; Features</span>
             <ChevronRight className="w-3.5 h-3.5" />
           </a>
-          <Link
-            to="/body-explorer"
+          <button
+            type="button"
             onClick={() => {
               sound.playClick();
               setMobileMenuOpen(false);
             }}
-            className="flex items-center justify-between p-2.5 rounded-lg hover:bg-[#3E1F29] text-[#D5BDA4] hover:text-[#F5F0E9] transition"
+            className="w-full flex items-center justify-between p-2.5 rounded-lg hover:bg-[#3E1F29] text-[#D5BDA4] hover:text-[#F5F0E9] transition cursor-default"
           >
             <span className="flex items-center gap-2">
               <Sparkles className="w-3.5 h-3.5 text-[#D5BDA4]" />
               3D Human Explorer
             </span>
             <ChevronRight className="w-3.5 h-3.5" />
-          </Link>
+          </button>
           <a
             href="https://github.com/SOLARIS-v1/S.O.L.A.R.I.S"
             target="_blank"

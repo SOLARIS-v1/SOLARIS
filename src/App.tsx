@@ -6,9 +6,7 @@ import SignupPage from './pages/SignupPage';
 import DashboardLayout from './components/layout/DashboardLayout';
 import DashboardPage from './pages/DashboardPage';
 import HealthMonitoringPage from './pages/HealthMonitoringPage';
-import BodyExplorerPage from './pages/BodyExplorerPage';
 import AnalyticsPage from './pages/AnalyticsPage';
-import HazardsPage from './pages/HazardsPage';
 import InsightsPage from './pages/InsightsPage';
 import RoutinePage from './pages/RoutinePage';
 import HistoryPage from './pages/HistoryPage';
@@ -39,9 +37,7 @@ export default function App() {
         >
           <Route path="/dashboard" element={<DashboardPage />} />
           <Route path="/health-monitoring" element={<HealthMonitoringPage />} />
-          <Route path="/body-explorer" element={<BodyExplorerPage />} />
           <Route path="/analytics" element={<AnalyticsPage />} />
-          <Route path="/hazards" element={<HazardsPage />} />
           <Route path="/insights" element={<InsightsPage />} />
           <Route path="/routine" element={<RoutinePage />} />
           <Route path="/history" element={<HistoryPage />} />

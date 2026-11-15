@@ -279,7 +279,7 @@ export default function HealthMonitoringPage() {
           <div className="bg-[#FFFCF8] border border-[#E4DAD0] rounded-2xl p-6 max-w-lg w-full shadow-2xl font-mono text-xs">
             <div className="flex items-center justify-between pb-3 border-b border-[#E4DAD0] mb-4">
               <span className="font-bold text-[#33302E] text-sm">
-                Record Dossier: {selectedRecordForDetail.id}
+                Record Details: {selectedRecordForDetail.id}
               </span>
               <button
                 onClick={() => setSelectedRecordForDetail(null)}

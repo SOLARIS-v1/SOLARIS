@@ -74,11 +74,11 @@ export default function ReportsPage() {
           <div className="flex items-center gap-2 mb-1">
             <FileText className="w-6 h-6 text-[#542B38]" />
             <h1 className="text-2xl font-extrabold text-[#33302E] font-orbitron tracking-wide">
-              Mission Health Report Dossier
+              Mission Health Report
             </h1>
           </div>
           <p className="text-xs font-mono text-[#817A76]">
-            Generate and export mission health dossiers for flight medical officers and telemetry archives.
+            Generate and export mission health reports for flight medical officers and telemetry archives.
           </p>
         </div>
 
@@ -117,7 +117,7 @@ export default function ReportsPage() {
         <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4 pb-6 border-b border-[#E4DAD0] print:border-black">
           <div>
             <div className="text-[10px] uppercase tracking-widest text-[#542B38] font-bold">
-              NASA HUMAN RESEARCH PROGRAM â€¢ FLIGHT TELEMETRY DOSSIER
+              NASA HUMAN RESEARCH PROGRAM • FLIGHT TELEMETRY REPORT
             </div>
             <h2 className="text-2xl font-extrabold text-[#33302E] print:text-black font-orbitron mt-1">
               SOLARIS MISSION REPORT

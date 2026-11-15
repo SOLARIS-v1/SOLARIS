@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Eye, EyeOff, Lock, Mail, Orbit, Sparkles, ArrowRight, ShieldCheck, AlertCircle } from 'lucide-react';
 import { setAuthUser, resetDemoData } from '../utils/localStorage';

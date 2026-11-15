@@ -1,6 +1,6 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Activity, Orbit, Sparkles, LogIn, Compass, Menu, X, ChevronRight } from 'lucide-react';
+import { Activity, Orbit, Sparkles, LogIn, Compass, Menu, X, ChevronRight, Github } from 'lucide-react';
 import { resetDemoData } from '../../utils/localStorage';
 import { sound } from '../../utils/audio';
 
@@ -94,6 +94,20 @@ export default function Navbar() {
             <span>Mission Control</span>
           </Link>
 
+          {/* GitHub Repository Button */}
+          <a
+            href="https://github.com/SOLARIS-v1/S.O.L.A.R.I.S"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => sound.playClick()}
+            className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#3E1F29] hover:bg-[#2E151E] border border-[#D5BDA4]/40 hover:border-[#D5BDA4] text-[#F5F0E9] hover:text-[#FFFFFF] text-xs font-mono font-bold tracking-wide transition-all shadow-warm-sm hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D5BDA4]"
+            title="GitHub Repository"
+            aria-label="GitHub Repository"
+          >
+            <Github className="w-4 h-4 text-[#D5BDA4]" />
+            <span className="hidden sm:inline">GitHub</span>
+          </a>
+
           {/* Login Link */}
           <Link
             to="/login"
@@ -173,6 +187,22 @@ export default function Navbar() {
             </span>
             <ChevronRight className="w-3.5 h-3.5" />
           </Link>
+          <a
+            href="https://github.com/SOLARIS-v1/S.O.L.A.R.I.S"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => {
+              sound.playClick();
+              setMobileMenuOpen(false);
+            }}
+            className="flex items-center justify-between p-2.5 rounded-lg hover:bg-[#3E1F29] text-[#D5BDA4] hover:text-[#F5F0E9] transition"
+          >
+            <span className="flex items-center gap-2">
+              <Github className="w-3.5 h-3.5 text-[#D5BDA4]" />
+              GitHub Repository
+            </span>
+            <ChevronRight className="w-3.5 h-3.5" />
+          </a>
         </div>
       )}
     </nav>

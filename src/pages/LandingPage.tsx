@@ -10,7 +10,8 @@ import {
   Sparkles,
   ChevronRight,
   Calendar,
-  FileText
+  FileText,
+  Github
 } from 'lucide-react';
 import Navbar from '../components/layout/Navbar';
 import { NASA_FIVE_HAZARDS } from '../data/hazardData';
@@ -550,6 +551,20 @@ export default function LandingPage() {
             <p className="text-xs sm:text-sm text-[#D5BDA4]/90 max-w-xl font-sans">
               Launch into the simulated Artemis III mission scenario with pre-calibrated cardiovascular telemetry, microgravity fluid shifts, and NASA research data.
             </p>
+          </div>
+
+          <div className="relative z-10 flex-shrink-0">
+            <a
+              href="https://github.com/SOLARIS-v1/S.O.L.A.R.I.S"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => sound.playClick()}
+              className="inline-flex items-center gap-2.5 px-6 py-3.5 rounded-xl bg-[#D5BDA4] hover:bg-[#EAE0D5] text-[#542B38] font-bold text-sm tracking-wide transition-all shadow-warm-sm hover:shadow-warm hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D5BDA4]"
+              title="View on GitHub"
+            >
+              <Github className="w-5 h-5 text-[#542B38]" />
+              <span>View on GitHub</span>
+            </a>
           </div>
         </div>
       </section>

@@ -56,7 +56,7 @@ export default function SettingsPage() {
   const handleLogout = () => {
     sound.playClick();
     clearAuthUser();
-    navigate('/login');
+    navigate('/');
   };
 
   return (

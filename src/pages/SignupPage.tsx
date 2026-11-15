@@ -179,9 +179,8 @@ export default function SignupPage() {
         </form>
 
         <div className="mt-5 text-center text-xs text-[#817A76]">
-          <span>Already registered? </span>
-          <Link to="/login" onClick={() => sound.playClick()} className="text-[#542B38] hover:underline font-semibold">
-            Sign In Here
+          <Link to="/" onClick={() => sound.playClick()} className="text-[#542B38] hover:underline font-semibold">
+            ← Return to Homepage
           </Link>
         </div>
       </div>

@@ -58,7 +58,7 @@ export default function Sidebar() {
     sound.playClick();
     clearAuthUser();
     setShowLogoutModal(false);
-    navigate('/login');
+    navigate('/');
   };
 
   return (

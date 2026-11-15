@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Activity, Orbit, Sparkles, LogIn, Menu, X, ChevronRight, Github } from 'lucide-react';
+import { Activity, Orbit, Sparkles, Menu, X, ChevronRight, Github } from 'lucide-react';
 import { sound } from '../../utils/audio';
 
 export default function Navbar() {
@@ -92,16 +92,6 @@ export default function Navbar() {
             <Github className="w-4 h-4 text-[#D5BDA4] shrink-0" />
             <span>GitHub</span>
           </a>
-
-          {/* Login Link */}
-          <Link
-            to="/login"
-            onClick={() => sound.playClick()}
-            className="p-2 rounded-lg bg-[#3E1F29] hover:bg-[#2E151E] border border-[#6E3B4B] text-[#D5BDA4] hover:text-[#F5F0E9] transition"
-            title="Astronaut Sign In"
-          >
-            <LogIn className="w-4 h-4" />
-          </Link>
 
           {/* Mobile Menu Toggle Button */}
           <button

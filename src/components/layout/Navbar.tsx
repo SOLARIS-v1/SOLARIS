@@ -1,19 +1,11 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Activity, Orbit, Sparkles, LogIn, Compass, Menu, X, ChevronRight, Github } from 'lucide-react';
-import { resetDemoData } from '../../utils/localStorage';
 import { sound } from '../../utils/audio';
 
 export default function Navbar() {
   const navigate = useNavigate();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const handleLaunchDemo = () => {
-    sound.playSuccess();
-    resetDemoData();
-    setMobileMenuOpen(false);
-    navigate('/dashboard');
-  };
 
   const scrollToSection = (id: string, e: React.MouseEvent) => {
     e.preventDefault();
@@ -71,36 +63,13 @@ export default function Navbar() {
 
         {/* Action CTAs */}
         <div className="flex items-center gap-2.5 sm:gap-3">
-          {/* Judge Demo Quick Access Button - Secondary Champagne with subtle glow */}
-          <button
-            onClick={handleLaunchDemo}
-            className="relative group flex items-center gap-1.5 px-3 sm:px-3.5 py-1.5 rounded-lg bg-[#D5BDA4] hover:bg-[#EAE0D5] text-[#542B38] text-xs font-mono font-bold tracking-wide transition-all shadow-warm-sm hover:shadow-warm hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D5BDA4]"
-            title="Pre-loads full Artemis Commander Alex dataset"
-          >
-            <span className="absolute -inset-0.5 rounded-lg bg-[#D5BDA4]/30 blur-sm group-hover:bg-[#D5BDA4]/60 transition opacity-75" />
-            <span className="relative flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-[#542B38] group-hover:rotate-12 transition-transform" />
-              <span>Judge Demo Mode</span>
-            </span>
-          </button>
-
-          {/* Launch Mission Control - Primary Burgundy highlight */}
-          <Link
-            to="/dashboard"
-            onClick={() => sound.playClick()}
-            className="hidden sm:flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-lg bg-[#3E1F29] hover:bg-[#2E151E] border border-[#D5BDA4]/30 hover:border-[#D5BDA4]/60 text-[#F5F0E9] font-bold text-xs tracking-wide transition-all shadow-warm-sm hover:-translate-y-0.5"
-          >
-            <Compass className="w-4 h-4 text-[#D5BDA4]" />
-            <span>Mission Control</span>
-          </Link>
-
           {/* GitHub Repository Button */}
           <a
             href="https://github.com/SOLARIS-v1/S.O.L.A.R.I.S"
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => sound.playClick()}
-            className="flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-lg bg-[#3E1F29] hover:bg-[#2E151E] border border-[#D5BDA4]/30 hover:border-[#D5BDA4]/60 text-[#F5F0E9] hover:text-[#FFFFFF] font-bold text-xs tracking-wide transition-all shadow-warm-sm hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D5BDA4]"
+            className="flex items-center justify-center gap-2 px-4 sm:px-5 py-2 rounded-lg bg-[#3E1F29] hover:bg-[#2E151E] border border-[#D5BDA4]/40 hover:border-[#D5BDA4] text-[#F5F0E9] hover:text-[#FFFFFF] font-bold text-xs tracking-wide transition-all shadow-warm-sm hover:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D5BDA4]"
             title="GitHub Repository"
             aria-label="GitHub Repository"
           >
